@@ -1011,20 +1011,6 @@
       100% { d: path("M0,50 C400,10 1040,90 1440,30 L1440,80 L0,80 Z"); }
     }
 
-    /* Floating emoji decorations */
-    .float-emoji {
-      position: absolute;
-      font-size: 2rem;
-      opacity: 0.08;
-      pointer-events: none;
-      animation: emoji-drift linear infinite;
-    }
-
-    @keyframes emoji-drift {
-      0% { transform: translateY(0) rotate(0deg); }
-      100% { transform: translateY(-60px) rotate(20deg); }
-    }
-
     /* Mobile */
     @media (max-width: 768px) {
       nav .nav-links {
@@ -1093,9 +1079,6 @@
         display: none;
       }
 
-      .float-emoji {
-        display: none;
-      }
     }
   </style>
 </head>
@@ -1131,7 +1114,7 @@
     <div class="starfield" id="starfield"></div>
     <div class="hero-content">
       <img src="logo-hero.png" alt="Arnakke Festival" class="hero-logo">
-      <p class="dates">9. – 12. Juli 2026 ☀️</p>
+      <p class="dates">9. – 12. Juli 2026</p>
       <p class="location">Arnakke Gaard</p>
       <p class="tagline">Igen i år byder Arnakke Festival velkommen til 3 uforglemmelige sommerdage. Vi glæder os til at se dig til fest under trækronerne.</p>
       <a href="#billetter" class="cta">Se billetter</a>
@@ -1149,7 +1132,7 @@
   <!-- Tickets -->
   <section class="tickets" id="billetter">
     <div class="reveal">
-      <h2 class="section-title">Billetsalg 🧾</h2>
+      <h2 class="section-title">Billetsalg</h2>
       <div class="section-divider"></div>
     </div>
 
@@ -1187,7 +1170,7 @@
     <div class="blob blob-2"></div>
     <div class="blob blob-3"></div>
     <div class="reveal">
-      <h2 class="section-title">Hvad er Arnakke Festival? 🌻</h2>
+      <h2 class="section-title">Hvad er Arnakke Festival?</h2>
       <div class="section-divider"></div>
     </div>
     <div class="about-content">
@@ -1198,7 +1181,7 @@
         Igen i år gentager vi succesen, og vi synes at du skal med. Vi har fokus på nærhed, både ift. til de lokale råvarer menuen er bygget op omkring, de mennesker festivalen fyldes af, og at musikoplevelsen kommer helt tæt på. Arnakke bringer nye minder og venner i nærheden af dig.
       </p>
       <p class="reveal" style="font-size: 1.2rem; font-weight: 600; color: var(--green);">
-        Og så ses vi i skoven til Arnakke Festival 🌲
+        Og så ses vi i skoven til Arnakke Festival
       </p>
 
       <div class="about-video reveal-scale">
@@ -1210,7 +1193,7 @@
   <!-- Practical info -->
   <section class="practical">
     <div class="reveal">
-      <h2 class="section-title">Praktisk info 📋</h2>
+      <h2 class="section-title">Praktisk info</h2>
       <div class="section-divider"></div>
     </div>
     <div class="practical-content">
@@ -1228,7 +1211,7 @@
   <!-- Lineup -->
   <section class="lineup" id="lineup">
     <div class="reveal">
-      <h2 class="section-title shimmer-text">Lineup 🎵</h2>
+      <h2 class="section-title shimmer-text">Lineup</h2>
       <p class="section-subtitle">3 dage med fantastisk musik under trækronerne.</p>
     </div>
 
@@ -1270,7 +1253,7 @@
   <!-- English version -->
   <section class="english" id="english">
     <div class="reveal">
-      <h2 class="section-title">English Version ⬇️</h2>
+      <h2 class="section-title">English Version</h2>
       <div class="section-divider"></div>
     </div>
     <div class="english-content">
@@ -1278,20 +1261,20 @@
 
       <div class="reveal">
         <p style="font-size: 1.2rem; font-weight: 700; color: var(--gray-800);">
-          ARNAKKE FESTIVAL – 9-12 July 2026 ☀️
+          ARNAKKE FESTIVAL – 9-12 July 2026
         </p>
         <p>
           Once again this year, Arnakke Festival welcomes you to 3 unforgettable summer days. We look forward to seeing you for a celebration beneath the treetops.
         </p>
       </div>
 
-      <h3 class="reveal">Ticket Sales 🧾</h3>
+      <h3 class="reveal">Ticket Sales</h3>
       <div class="reveal">
         <p>Partout - 575 kr.<br>One day ticket - 275 kr.</p>
         <p>With the all-access ticket, enjoy 3 days of music, events, food, and endless fellowship.</p>
       </div>
 
-      <h3 class="reveal">What is Arnakke Festival? 🌻</h3>
+      <h3 class="reveal">What is Arnakke Festival?</h3>
       <div class="reveal">
         <p>
           For the past 6 years, Arnakke Gaard has hosted the festival. During an extended summer weekend, local farming is complemented by the cultivation of communities, musical experiences, and long-table dinners. This year, we're repeating the success—and we believe you should be a part of it.
@@ -1300,11 +1283,11 @@
           We emphasize closeness, from the local produce that shapes our menu, to the people who fill the festival, and the intimate musical experience. Arnakke brings new memories and friends close to you.
         </p>
         <p style="font-weight: 600; color: var(--gray-800);">
-          See you in the forest at Arnakke Festival. 🌲
+          See you in the forest at Arnakke Festival.
         </p>
       </div>
 
-      <h3 class="reveal">Practical Info 📋</h3>
+      <h3 class="reveal">Practical Info</h3>
       <div class="reveal">
         <p>Arnakke Festival takes place from Wednesday, 9th July to Saturday, 12th July.</p>
         <p>The music program, menu, and further information will be announced continuously.</p>
@@ -1546,21 +1529,6 @@
     }
     // Start typing after hero animations complete
     setTimeout(typeChar, 1400);
-
-    // Floating emoji decorations in about section
-    const aboutSection = document.querySelector('.about');
-    const emojis = ['🌻', '🎵', '🌲', '🍽️', '☀️', '🎶'];
-    emojis.forEach((emoji, i) => {
-      const el = document.createElement('span');
-      el.classList.add('float-emoji');
-      el.textContent = emoji;
-      el.style.left = (10 + Math.random() * 80) + '%';
-      el.style.top = (10 + Math.random() * 80) + '%';
-      el.style.animationDuration = (6 + Math.random() * 6) + 's';
-      el.style.animationDelay = (i * 1.5) + 's';
-      el.style.fontSize = (1.5 + Math.random() * 1.5) + 'rem';
-      aboutSection.appendChild(el);
-    });
 
     // Magnetic hover on CTA button
     cta.addEventListener('mousemove', (e) => {
