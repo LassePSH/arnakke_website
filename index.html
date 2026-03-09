@@ -4,211 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arnakke Festival 2026 — 9.–12. Juli</title>
-  <meta name="description" content="Arnakke Festival 9.–12. Juli 2026. Musik, fællesskab og sommerstemning under trækronerne.">
+  <meta name="description" content="Arnakke Festival 9.–12. Juli 2026. Musik, fællesskab og sommerstemning under trækronerne på Arnakke Gaard i Svinninge.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700;1,6..96,900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --pink: #ff6b9d;
-      --orange: #ff8a47;
-      --yellow: #ffc53a;
-      --green: #4ecdc4;
-      --purple: #a855f7;
-      --dark: #1a1a2e;
-      --white: #ffffff;
-      --gray-50: #f9fafb;
-      --gray-100: #f3f4f6;
-      --gray-600: #4b5563;
-      --gray-800: #1f2937;
+      --paper:       #F2EAD7;
+      --paper-dark:  #E0D4BA;
+      --ink:         #1A1612;
+      --forest:      #253527;
+      --terra:       #B8351A;
+      --gold:        #C09030;
+      --sage:        #7A9175;
+      --muted:       #7A7060;
+      --cream:       #FAF5EC;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      color: var(--gray-800);
-      background: var(--white);
+      font-family: 'Lora', Georgia, serif;
+      background: var(--paper);
+      color: var(--ink);
       overflow-x: hidden;
     }
 
-    h1, h2, h3 {
-      font-family: 'Inter', sans-serif;
-    }
-
-    /* Scroll reveal animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                  transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .reveal-left {
-      opacity: 0;
-      transform: translateX(-60px);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                  transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .reveal-left.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .reveal-right {
-      opacity: 0;
-      transform: translateX(60px);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                  transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .reveal-right.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .reveal-scale {
-      opacity: 0;
-      transform: scale(0.85);
-      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                  transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .reveal-scale.visible {
-      opacity: 1;
-      transform: scale(1);
-    }
-
-    /* Stagger children */
-    .stagger-children .reveal:nth-child(1) { transition-delay: 0s; }
-    .stagger-children .reveal:nth-child(2) { transition-delay: 0.1s; }
-    .stagger-children .reveal:nth-child(3) { transition-delay: 0.2s; }
-    .stagger-children .reveal:nth-child(4) { transition-delay: 0.3s; }
-    .stagger-children .reveal:nth-child(5) { transition-delay: 0.4s; }
-    .stagger-children .reveal:nth-child(6) { transition-delay: 0.5s; }
-
-    /* Floating particles */
-    .particles {
+    /* ============================================================
+       FILM GRAIN
+    ============================================================ */
+    body::before {
+      content: '';
       position: fixed;
-      inset: 0;
+      inset: -100%;
+      width: 300%;
+      height: 300%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.042;
       pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
+      z-index: 9000;
+      animation: filmgrain 6s steps(7) infinite;
     }
 
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.08;
-      animation: float-particle linear infinite;
+    @keyframes filmgrain {
+      0%   { transform: translate(0,   0); }
+      14%  { transform: translate(-7%, -12%); }
+      28%  { transform: translate(9%,  5%); }
+      42%  { transform: translate(-4%, 20%); }
+      57%  { transform: translate(13%, -9%); }
+      71%  { transform: translate(-9%, 13%); }
+      85%  { transform: translate(4%,  -20%); }
+      100% { transform: translate(0,   0); }
     }
 
-    @keyframes float-particle {
-      0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-      }
-      10% {
-        opacity: 0.08;
-      }
-      90% {
-        opacity: 0.08;
-      }
-      100% {
-        transform: translateY(-100px) rotate(720deg);
-        opacity: 0;
-      }
-    }
-
-    /* Navigation */
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      padding: 1rem 2rem;
+      top: 0; left: 0; right: 0;
+      z-index: 500;
+      padding: 1.4rem 2.5rem;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      justify-content: space-between;
+      transition: background 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease;
+      border-bottom: 1px solid transparent;
     }
 
     nav.scrolled {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
-      padding: 0.7rem 2rem;
+      background: rgba(242, 234, 215, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom-color: var(--paper-dark);
     }
 
-    nav .logo {
-      display: flex;
-      align-items: center;
+    .nav-wordmark {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
       text-decoration: none;
+      transition: color 0.5s;
     }
 
-    nav .logo img {
-      height: 28px;
-      width: auto;
-      filter: brightness(0) invert(1);
-      transition: filter 0.4s;
-    }
+    nav.scrolled .nav-wordmark { color: var(--ink); }
 
-    nav.scrolled .logo img {
-      filter: none;
-    }
-
-    nav .nav-links {
+    .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 2.2rem;
       list-style: none;
     }
 
-    nav .nav-links a {
-      color: #fff;
+    .nav-links a {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
       transition: color 0.3s;
-      position: relative;
     }
 
-    nav .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--green);
-      transition: width 0.3s;
-    }
-
-    nav .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    nav.scrolled .nav-links a {
-      color: var(--gray-800);
-    }
-
-    nav .nav-links a:hover {
-      color: var(--green);
-    }
+    nav.scrolled .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--terra) !important; }
 
     .menu-toggle {
       display: none;
@@ -217,1329 +123,1043 @@
       cursor: pointer;
       flex-direction: column;
       gap: 5px;
+      padding: 4px;
     }
 
     .menu-toggle span {
       display: block;
-      width: 26px;
-      height: 3px;
-      background: #fff;
-      border-radius: 2px;
-      transition: transform 0.3s, opacity 0.3s, background 0.4s;
+      width: 22px;
+      height: 1.5px;
+      background: rgba(255,255,255,0.85);
+      transition: background 0.5s;
     }
 
-    nav.scrolled .menu-toggle span {
-      background: var(--gray-800);
+    nav.scrolled .menu-toggle span { background: var(--ink); }
+
+    @media (max-width: 720px) {
+      .menu-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--paper);
+        padding: 1.5rem 2.5rem 2rem;
+        flex-direction: column;
+        gap: 1.2rem;
+        border-bottom: 1px solid var(--paper-dark);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { color: var(--muted); font-size: 0.75rem; }
     }
 
-    /* Hero */
+    /* ============================================================
+       HERO
+    ============================================================ */
     .hero {
-      min-height: 100vh;
+      position: relative;
+      height: 100svh;
+      min-height: 620px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      position: relative;
-      background: var(--dark);
       overflow: hidden;
     }
 
-    /* Animated gradient overlay on hero */
-    .hero::before {
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('pictures/header.jpg');
+      background-size: cover;
+      background-position: center 45%;
+      will-change: transform;
+    }
+
+    /* Dual overlay: subtle red bloom at top + deep darkening at bottom */
+    .hero-bg::after {
       content: '';
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 20% 50%, rgba(78, 205, 196, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 80%, rgba(255, 107, 157, 0.1) 0%, transparent 50%);
-      animation: gradient-shift 8s ease-in-out infinite alternate;
-      z-index: 0;
-    }
-
-    @keyframes gradient-shift {
-      0% {
-        transform: scale(1) rotate(0deg);
-      }
-      100% {
-        transform: scale(1.1) rotate(2deg);
-      }
+        radial-gradient(ellipse 80% 50% at 50% 10%, rgba(160, 35, 10, 0.22) 0%, transparent 65%),
+        linear-gradient(to bottom,
+          rgba(18, 12, 8, 0.25) 0%,
+          rgba(18, 12, 8, 0.1)  45%,
+          rgba(18, 12, 8, 0.72) 100%
+        );
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6rem;
+      opacity: 0;
+      animation: fadeUp 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .hero-logo {
-      display: block;
-      width: clamp(280px, 60vw, 700px);
-      height: auto;
-      margin-bottom: 1rem;
-      filter: drop-shadow(2px 4px 16px rgba(0,0,0,0.5));
-      animation: hero-logo-in 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-      opacity: 0;
-      transform: scale(0.8) translateY(20px);
+      width: min(360px, 70vw);
+      filter: drop-shadow(0 4px 32px rgba(0,0,0,0.5));
     }
 
-    @keyframes hero-logo-in {
-      to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
+    .hero-date-pill {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.28);
+      padding: 0.45em 1.4em;
     }
 
-    .hero .dates {
-      font-size: clamp(1.2rem, 3vw, 2rem);
-      color: #fff;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      animation: fade-up 0.8s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-      opacity: 0;
-      transform: translateY(20px);
+    .hero-tagline {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
     }
 
-    .hero .location {
-      font-size: clamp(0.95rem, 2vw, 1.2rem);
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 1rem;
-      animation: fade-up 0.8s 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .hero .tagline {
-      font-size: clamp(1rem, 2vw, 1.15rem);
-      color: rgba(255, 255, 255, 0.75);
-      margin-bottom: 2.5rem;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
-      animation: fade-up 0.8s 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    .hero .cta {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: var(--green);
-      color: var(--dark);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.2rem;
-      border-radius: 50px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      animation: fade-up 0.8s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-      opacity: 0;
-      transform: translateY(20px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero .cta::before {
-      content: '';
+    .hero-scroll {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.6s;
-    }
-
-    .hero .cta:hover::before {
-      transform: translateX(100%);
-    }
-
-    .hero .cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(78, 205, 196, 0.4);
-    }
-
-    @keyframes fade-up {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Scroll indicator */
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2rem;
+      bottom: 2.5rem;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
-      animation: bounce 2s ease-in-out infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      animation: fadeUp 2s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
     }
 
-    .scroll-indicator svg {
-      width: 28px;
-      height: 28px;
-      stroke: rgba(255,255,255,0.5);
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .scroll-line {
+      width: 1px;
+      height: 44px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.45), transparent);
+      animation: pulse 2.2s ease-in-out infinite;
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(10px); }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.45; transform: scaleY(1); }
+      50%       { opacity: 0.9;  transform: scaleY(1.15); }
     }
 
-    /* Wave divider */
-    .wave {
-      display: block;
-      width: 100%;
-      height: 80px;
+    .scroll-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
     }
 
-    .wave-top {
-      margin-bottom: -2px;
+    /* ============================================================
+       INFO STRIP
+    ============================================================ */
+    .info-strip {
+      background: var(--forest);
+      padding: 1rem clamp(1.5rem, 5vw, 4rem);
     }
 
-    .wave-bottom {
-      margin-top: -2px;
-    }
-
-    /* Sections */
-    section {
-      padding: 5rem 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 1rem;
-      font-weight: 800;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--gray-600);
-      max-width: 600px;
-      margin: 0 auto 3rem;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    /* Tickets */
-    .tickets {
-      background: var(--white);
-      text-align: center;
-    }
-
-    .tickets .section-title {
-      color: var(--gray-800);
-    }
-
-    .ticket-cards {
-      max-width: 800px;
+    .info-strip-inner {
+      max-width: 1100px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .ticket-card {
-      background: var(--white);
-      border: 2px solid var(--gray-100);
-      border-radius: 20px;
-      padding: 2.5rem 2rem;
-      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .ticket-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--green), var(--purple));
-      transform: scaleX(0);
-      transition: transform 0.4s;
-      transform-origin: left;
-    }
-
-    .ticket-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .ticket-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-      border-color: var(--green);
-    }
-
-    .ticket-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-    }
-
-    .ticket-price {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(135deg, var(--green), var(--purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .ticket-features {
-      list-style: none;
-      margin-bottom: 1.5rem;
-      text-align: left;
-    }
-
-    .ticket-features li {
-      padding: 0.4rem 0;
-      font-size: 0.95rem;
-      color: var(--gray-600);
-    }
-
-    .ticket-features li::before {
-      content: '✓ ';
-      font-weight: 700;
-      color: var(--green);
-    }
-
-    /* About */
-    .about {
-      background: var(--white);
-    }
-
-    .about-content {
-      max-width: 750px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .about-content p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: var(--gray-600);
-      margin-bottom: 1.5rem;
-    }
-
-    .about-content .highlight {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--gray-800);
-      position: relative;
-      display: inline-block;
-    }
-
-    .about-video {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      margin: 2rem auto 3rem;
-      padding-top: 56.25%;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .about-video:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
-    }
-
-    .about-video iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* Practical info */
-    .practical {
-      background: var(--gray-50);
-    }
-
-    .practical-content {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .practical-content p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--gray-600);
-      margin-bottom: 1rem;
-    }
-
-    /* English section */
-    .english {
-      background: var(--white);
-      border-top: 1px solid var(--gray-100);
-    }
-
-    .english-content {
-      max-width: 750px;
-      margin: 0 auto;
-    }
-
-    .english-content h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-top: 2rem;
-      margin-bottom: 0.8rem;
-      color: var(--gray-800);
-    }
-
-    .english-content p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--gray-600);
-      margin-bottom: 1rem;
-    }
-
-    .lang-divider {
       display: flex;
       align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
     }
 
-    .lang-divider::before,
-    .lang-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--gray-100);
-    }
-
-    .lang-divider span {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--gray-600);
+    .info-strip-item {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
+      color: rgba(242, 234, 215, 0.55);
+      padding: 0.3rem 1.8rem;
     }
 
-    /* Lineup */
-    .lineup {
-      background: var(--dark);
-      color: #fff;
+    .info-strip-item strong { color: rgba(242, 234, 215, 0.9); font-weight: 700; }
+
+    .info-strip-dot {
+      color: rgba(242, 234, 215, 0.2);
+      font-size: 0.5rem;
     }
 
-    .lineup .section-title {
-      color: var(--yellow);
-    }
-
-    .lineup .section-subtitle {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    .lineup-grid {
-      max-width: 900px;
+    /* ============================================================
+       SHARED SECTION UTILITIES
+    ============================================================ */
+    .container {
+      max-width: 1100px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
     }
 
-    .artist-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
-      padding: 2rem;
-      text-align: center;
-      transition: transform 0.3s, background 0.3s, border-color 0.3s;
+    .section-pad {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
     }
 
-    .artist-card:hover {
-      transform: translateY(-4px);
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.2);
+    .label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 1.4rem;
     }
 
-    .artist-card .artist-name {
-      font-size: 1.4rem;
+    .label::after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.45;
+      flex-shrink: 0;
+    }
+
+    .display {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 7.5vw, 6.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+    }
+
+    .display em {
+      font-style: italic;
+      color: var(--terra);
+    }
+
+    /* Reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.v { opacity: 1; transform: translateY(0); }
+    .reveal.delay-1 { transition-delay: 0.12s; }
+    .reveal.delay-2 { transition-delay: 0.24s; }
+    .reveal.delay-3 { transition-delay: 0.36s; }
+
+    /* ============================================================
+       TICKETS
+    ============================================================ */
+    .tickets {
+      background: var(--cream);
+    }
+
+    .ticket-opening {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+      color: var(--terra);
+      margin-top: 1.2rem;
+      font-weight: 400;
+    }
+
+    .ticket-opening strong {
+      font-style: normal;
       font-weight: 700;
+    }
+
+    .tickets-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .ticket-stub {
+      background: var(--paper);
+      border: 1px solid var(--paper-dark);
+      display: flex;
+    }
+
+    .ticket-body {
+      flex: 1;
+      padding: 2rem 1.8rem;
+    }
+
+    .ticket-type {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .ticket-sub {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .ticket-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .ticket-list li {
+      font-size: 0.88rem;
+      color: var(--ink);
+      line-height: 1.4;
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+
+    .ticket-list li::before {
+      content: '—';
+      font-family: 'Courier Prime', monospace;
+      color: var(--terra);
+      flex-shrink: 0;
+    }
+
+    .ticket-spine {
+      width: 100px;
+      background: var(--ink);
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+      border-left: 1.5px dashed var(--paper-dark);
+      flex-shrink: 0;
+    }
+
+    .ticket-spine-date {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--gold);
+      line-height: 1.2;
+    }
+
+    .ticket-spine-place {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(242, 234, 215, 0.45);
+      line-height: 1.5;
+    }
+
+    .tickets-note {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    /* ============================================================
+       ABOUT
+    ============================================================ */
+    .about {
+      background: var(--ink);
+    }
+
+    .about .label { color: var(--sage); }
+    .about .label::after { background: var(--sage); }
+    .about .display { color: var(--paper); }
+    .about .display em { color: var(--gold); }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 6vw, 6rem);
+      margin-top: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+      line-height: 1.85;
+      color: rgba(242, 234, 215, 0.78);
+      margin-bottom: 1.4rem;
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .about-text strong { color: var(--gold); font-weight: 500; }
+
+    .about-quote {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      color: var(--gold);
+      line-height: 1.5;
+      border-left: 2px solid var(--terra);
+      padding-left: 1.5rem;
+      margin: 2rem 0 2.2rem;
+    }
+
+    .about-photo {
+      position: sticky;
+      top: 6rem;
+    }
+
+    .about-photo img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      display: block;
+      filter: sepia(0.1) contrast(1.05);
+    }
+
+    .about-photo-cap {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-top: 0.8rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 720px) {
+      .about-layout { grid-template-columns: 1fr; }
+      .about-photo { position: static; order: -1; }
+      .about-photo img { aspect-ratio: 16/10; }
+    }
+
+    /* ============================================================
+       GALLERY
+    ============================================================ */
+    .gallery {
+      background: var(--paper);
+      padding-bottom: clamp(5rem, 10vw, 9rem);
+    }
+
+    .gallery-header {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem) 0;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: clamp(0.6rem, 1.2vw, 1rem);
+      margin-top: 2.5rem;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .photo-frame {
+      overflow: hidden;
+      position: relative;
+      background: var(--ink);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: sepia(0.12) contrast(1.07) saturate(0.9);
+      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s;
+    }
+
+    .photo-frame:hover img {
+      transform: scale(1.04);
+      filter: sepia(0) contrast(1.04) saturate(1.05);
+    }
+
+    /* Film vignette */
+    .photo-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 60%, rgba(18,12,8,0.28) 100%);
+      pointer-events: none;
+    }
+
+    .gp1 { grid-column: 1 / 8; aspect-ratio: 16/10; }
+    .gp2 { grid-column: 8 / 13; aspect-ratio: 3/4; }
+    .gp3 { grid-column: 1 / 5; aspect-ratio: 3/4; }
+    .gp4 { grid-column: 5 / 13; aspect-ratio: 16/10; }
+
+    @media (max-width: 720px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gp1, .gp2, .gp3, .gp4 {
+        grid-column: auto;
+        aspect-ratio: 4/3;
+      }
+    }
+
+    /* ============================================================
+       PROGRAM
+    ============================================================ */
+    .program {
+      background: var(--forest);
+    }
+
+    .program .label { color: var(--sage); }
+    .program .label::after { background: var(--sage); }
+    .program .display { color: var(--paper); }
+
+    .program-sub {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: rgba(242, 234, 215, 0.45);
+      margin-top: 1.2rem;
+    }
+
+    .program-days {
+      display: flex;
+      gap: clamp(0.6rem, 1.5vw, 1rem);
+      margin-top: 3.5rem;
+      flex-wrap: wrap;
+    }
+
+    .program-day {
+      border: 1px solid rgba(122, 145, 117, 0.22);
+      padding: 1.4rem 1.8rem;
+      flex: 1;
+      min-width: 130px;
+    }
+
+    .day-name {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--sage);
       margin-bottom: 0.4rem;
     }
 
-    .artist-card .artist-tag {
-      font-size: 0.85rem;
-      color: var(--green);
-      font-weight: 500;
-    }
-
-    .headliner .artist-name {
-      font-size: 1.8rem;
-      color: var(--yellow);
-    }
-
-    .headliner {
-      grid-column: 1 / -1;
-      background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(168, 85, 247, 0.15));
-      border-color: rgba(255, 199, 58, 0.3);
-    }
-
-    .more-coming {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 1.1rem;
-      color: var(--pink);
-      font-weight: 600;
-    }
-
-    /* Decorative blobs */
-    .blob {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.07;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .blob-1 {
-      width: 400px;
-      height: 400px;
-      background: var(--green);
-      top: -100px;
-      right: -100px;
-      animation: blob-float 12s ease-in-out infinite alternate;
-    }
-
-    .blob-2 {
-      width: 350px;
-      height: 350px;
-      background: var(--purple);
-      bottom: -80px;
-      left: -80px;
-      animation: blob-float 10s ease-in-out infinite alternate-reverse;
-    }
-
-    .blob-3 {
-      width: 300px;
-      height: 300px;
-      background: var(--pink);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      animation: blob-float 14s ease-in-out infinite alternate;
-    }
-
-    @keyframes blob-float {
-      0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(30px, -30px) scale(1.1); }
-    }
-
-    /* Footer */
-    footer {
-      background: var(--dark);
-      color: rgba(255, 255, 255, 0.7);
-      text-align: center;
-      padding: 3rem 2rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    footer .footer-title {
+    .day-date {
+      font-family: 'Bodoni Moda', Georgia, serif;
       font-size: 1.5rem;
-      color: #fff;
-      margin-bottom: 1rem;
       font-weight: 700;
+      color: var(--paper);
+      line-height: 1.1;
     }
 
-    footer .socials {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
+    .day-tba {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.56rem;
+      letter-spacing: 0.2em;
+      color: rgba(242, 234, 215, 0.22);
+      margin-top: 0.5rem;
     }
 
-    footer .socials a {
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
+    /* ============================================================
+       PRACTICAL
+    ============================================================ */
+    .practical {
+      background: var(--paper-dark);
+    }
+
+    .practical-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      margin-top: 3.5rem;
+      align-items: start;
+    }
+
+    .practical-block h3 {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(122, 112, 96, 0.3);
+    }
+
+    .practical-block p {
       font-size: 0.95rem;
-      transition: color 0.3s, transform 0.3s;
-      display: inline-block;
+      line-height: 1.85;
+      color: var(--ink);
+      margin-bottom: 1rem;
     }
 
-    footer .socials a:hover {
-      color: var(--green);
-      transform: translateY(-2px);
+    .practical-block p:last-child { margin-bottom: 0; }
+    .practical-block strong { font-weight: 600; }
+
+    @media (max-width: 720px) {
+      .practical-grid { grid-template-columns: 1fr; }
     }
 
-    footer .copy {
-      font-size: 0.85rem;
+    /* ============================================================
+       ENGLISH
+    ============================================================ */
+    .english {
+      background: var(--ink);
     }
 
-    /* Smooth text gradient for section titles */
-    .gradient-text {
-      background: linear-gradient(135deg, var(--green), var(--purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+    .english .label { color: var(--gold); }
+    .english .label::after { background: var(--gold); }
+    .english .display {
+      color: var(--paper);
+      font-size: clamp(2.4rem, 5.5vw, 5rem);
     }
 
-    /* Divider line */
-    .section-divider {
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--green), var(--purple));
-      border-radius: 2px;
-      margin: 0 auto 2rem;
-      animation: divider-grow 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-      transform-origin: center;
+    .english-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2.5rem, 5vw, 5rem);
+      margin-top: 4rem;
     }
 
-    @keyframes divider-grow {
-      from { transform: scaleX(0); }
-      to { transform: scaleX(1); }
+    .english-col h3 {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      margin-top: 2.2rem;
     }
 
-    /* Scroll progress bar */
-    .scroll-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--green), var(--purple), var(--pink));
-      z-index: 200;
-      transform-origin: left;
-      transform: scaleX(0);
-      transition: transform 0.1s linear;
+    .english-col h3:first-child { margin-top: 0; }
+
+    .english-col p {
+      font-size: 0.9rem;
+      line-height: 1.85;
+      color: rgba(242, 234, 215, 0.7);
+      margin-bottom: 0.8rem;
     }
 
-    /* Mouse glow */
-    .mouse-glow {
-      position: fixed;
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(78, 205, 196, 0.06) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.3s;
+    .english-col p:last-child { margin-bottom: 0; }
+    .english-col strong { color: var(--paper); font-weight: 500; }
+
+    @media (max-width: 720px) {
+      .english-cols { grid-template-columns: 1fr; }
     }
 
-    /* Hero starfield */
-    .starfield {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      overflow: hidden;
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 3rem clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6rem;
+      text-align: center;
     }
 
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: #fff;
-      border-radius: 50%;
-      animation: twinkle ease-in-out infinite;
+    .footer-logo {
+      height: 28px;
+      opacity: 0.35;
+      filter: invert(0);
     }
 
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.5); }
+    .footer-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    /* Shooting stars */
-    .shooting-star {
-      position: absolute;
-      width: 80px;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent);
-      z-index: 1;
-      animation: shoot linear forwards;
-      opacity: 0;
+    .footer-links a {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.25s;
     }
 
-    @keyframes shoot {
-      0% { transform: translateX(0) translateY(0); opacity: 1; }
-      100% { transform: translateX(-300px) translateY(300px); opacity: 0; }
+    .footer-links a:hover { color: var(--paper); }
+
+    .footer-copy {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      color: rgba(122, 112, 96, 0.45);
     }
 
-    /* Shimmer text effect on section titles */
-    .shimmer-text {
-      position: relative;
-      display: inline-block;
-    }
-
-    .shimmer-text::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 60%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-      animation: text-shimmer 4s ease-in-out infinite;
-    }
-
-    @keyframes text-shimmer {
-      0% { left: -100%; }
-      50%, 100% { left: 200%; }
-    }
-
-    /* Animated gradient border on artist cards */
-    .artist-card {
-      position: relative;
-    }
-
-    .artist-card::before {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: 18px;
-      background: conic-gradient(from var(--card-angle, 0deg), var(--green), var(--purple), var(--pink), var(--yellow), var(--green));
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .artist-card:hover::before {
-      opacity: 1;
-      animation: spin-border 3s linear infinite;
-    }
-
-    @keyframes spin-border {
-      to { --card-angle: 360deg; }
-    }
-
-    @property --card-angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-    }
-
-    /* 3D tilt perspective container */
-    .tilt-card {
-      transform-style: preserve-3d;
-      perspective: 800px;
-    }
-
-    .tilt-card .tilt-inner {
-      transition: transform 0.15s ease-out;
-      transform-style: preserve-3d;
-    }
-
-    /* Sparkle effect */
-    .sparkle {
-      position: fixed;
-      pointer-events: none;
-      z-index: 300;
-      animation: sparkle-fly 0.6s ease-out forwards;
-    }
-
-    .sparkle::before {
-      content: '';
-      display: block;
-      width: 6px;
-      height: 6px;
-      background: var(--green);
-      border-radius: 50%;
-      box-shadow: 0 0 6px var(--green), 0 0 12px var(--green);
-    }
-
-    @keyframes sparkle-fly {
-      0% { transform: translate(0, 0) scale(1); opacity: 1; }
-      100% { transform: translate(var(--sx), var(--sy)) scale(0); opacity: 0; }
-    }
-
-    /* Glowing CTA pulse ring */
-    .hero .cta::after {
-      content: '';
-      position: absolute;
-      inset: -4px;
-      border-radius: 54px;
-      border: 2px solid var(--green);
-      opacity: 0;
-      animation: cta-ring 3s ease-in-out infinite;
-    }
-
-    @keyframes cta-ring {
-      0%, 100% { opacity: 0; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(1.05); }
-    }
-
-    /* Typewriter cursor */
-    .typewriter-cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1.2em;
-      background: rgba(255,255,255,0.7);
-      margin-left: 2px;
-      vertical-align: text-bottom;
-      animation: blink-cursor 0.8s step-end infinite;
-    }
-
-    @keyframes blink-cursor {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
-    /* Headliner glow pulse */
-    .headliner {
-      animation: headliner-glow 4s ease-in-out infinite;
-    }
-
-    @keyframes headliner-glow {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 199, 58, 0); }
-      50% { box-shadow: 0 0 30px 4px rgba(255, 199, 58, 0.15); }
-    }
-
-    /* Animated wave paths */
-    .wave path {
-      animation: wave-morph 6s ease-in-out infinite alternate;
-    }
-
-    @keyframes wave-morph {
-      0% { d: path("M0,40 C360,100 1080,0 1440,40 L1440,80 L0,80 Z"); }
-      100% { d: path("M0,50 C400,10 1040,90 1440,30 L1440,80 L0,80 Z"); }
-    }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      nav .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.97);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5rem;
-        transition: right 0.3s;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-      }
-
-      nav .nav-links.open {
-        right: 0;
-      }
-
-      nav .nav-links a {
-        font-size: 1.3rem;
-        color: var(--gray-800) !important;
-      }
-
-      .menu-toggle {
-        display: flex;
-        z-index: 101;
-      }
-
-      .menu-toggle.open span {
-        background: var(--gray-800) !important;
-      }
-
-      .menu-toggle.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 6px);
-      }
-
-      .menu-toggle.open span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .menu-toggle.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -6px);
-      }
-
-      section {
-        padding: 3.5rem 1.5rem;
-      }
-
-      .headliner {
-        grid-column: auto;
-      }
-
-      .blob {
-        display: none;
-      }
-
-      .mouse-glow {
-        display: none;
-      }
-
-      .starfield .star:nth-child(n+30) {
-        display: none;
-      }
-
-    }
   </style>
 </head>
 <body>
 
-  <!-- Scroll progress bar -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Mouse glow -->
-  <div class="mouse-glow" id="mouseGlow"></div>
-
-  <!-- Floating particles -->
-  <div class="particles" id="particles"></div>
-
-  <!-- Navigation -->
-  <nav>
-    <a href="#" class="logo"><img src="logo-clean.png" alt="Arnakke Festival"></a>
-    <ul class="nav-links">
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar">
+    <a href="#" class="nav-wordmark">Arnakke Festival</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Åbn menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#billetter">Billetter</a></li>
-      <li><a href="#om">Om festivalen</a></li>
-      <li><a href="#lineup">Lineup</a></li>
+      <li><a href="#om">Om</a></li>
+      <li><a href="#galleri">Billeder</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#praktisk">Praktisk</a></li>
       <li><a href="#english">English</a></li>
     </ul>
-    <button class="menu-toggle" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </nav>
 
-  <!-- Hero -->
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
   <section class="hero" id="top">
-    <div class="starfield" id="starfield"></div>
+    <div class="hero-bg" id="heroBg"></div>
     <div class="hero-content">
       <img src="logo-hero.png" alt="Arnakke Festival" class="hero-logo">
-      <p class="dates">9. – 12. Juli 2026</p>
-      <p class="location">Arnakke Gaard</p>
-      <p class="tagline">Igen i år byder Arnakke Festival velkommen til 3 uforglemmelige sommerdage. Vi glæder os til at se dig til fest under trækronerne.</p>
-      <a href="#billetter" class="cta">Se billetter</a>
+      <div class="hero-date-pill">9.–12. Juli 2026</div>
+      <p class="hero-tagline">Tre uforglemmelige sommerdage under trækronerne</p>
     </div>
-    <div class="scroll-indicator">
-      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span class="scroll-label">Scroll</span>
     </div>
   </section>
 
-  <!-- Wave: Hero → Tickets -->
-  <svg class="wave wave-top" viewBox="0 0 1440 80" preserveAspectRatio="none">
-    <path fill="#ffffff" d="M0,40 C360,100 1080,0 1440,40 L1440,80 L0,80 Z"/>
-  </svg>
-
-  <!-- Tickets -->
-  <section class="tickets" id="billetter">
-    <div class="reveal">
-      <h2 class="section-title">Billetsalg</h2>
-      <div class="section-divider"></div>
+  <!-- ============================================================
+       INFO STRIP
+  ============================================================ -->
+  <div class="info-strip">
+    <div class="info-strip-inner">
+      <span class="info-strip-item"><strong>Arnakke Gaard</strong> — Svinninge</span>
+      <span class="info-strip-dot">◆</span>
+      <span class="info-strip-item">Musik · Events · Mad · Fællesskab</span>
+      <span class="info-strip-dot">◆</span>
+      <span class="info-strip-item">Billetsalg åbner <strong>26. marts kl. 18:00</strong></span>
     </div>
+  </div>
 
-    <div class="ticket-cards stagger-children">
-      <div class="ticket-card reveal tilt-card">
-        <div class="tilt-inner">
-          <h3>Partout</h3>
-          <p class="ticket-price">575 kr.</p>
-          <ul class="ticket-features">
-            <li>3 dages musik</li>
-            <li>Events</li>
-            <li>Mad</li>
-            <li>Uendeligt samvær</li>
-          </ul>
+  <!-- ============================================================
+       TICKETS
+  ============================================================ -->
+  <section class="tickets section-pad" id="billetter">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="label">Billetsalg</div>
+        <h2 class="display">Kom<br>med.</h2>
+        <p class="ticket-opening">Salget åbner <strong>26. marts kl. 18:00</strong></p>
+      </div>
+
+      <div class="tickets-grid">
+
+        <div class="ticket-stub reveal delay-1">
+          <div class="ticket-body">
+            <div class="ticket-type">Partout</div>
+            <div class="ticket-sub">Fuld festival — 3 dage</div>
+            <ul class="ticket-list">
+              <li>3 dages musik</li>
+              <li>Events &amp; workshops</li>
+              <li>Hjemmebagte morgenboller</li>
+              <li>Langbordsmiddage med grønt fra gården</li>
+              <li>Fest så længe du har lyst</li>
+              <li>Billig bar</li>
+              <li>Nye bekendtskaber</li>
+            </ul>
+          </div>
+          <div class="ticket-spine">
+            <div class="ticket-spine-date">9.–12.<br>Juli</div>
+            <div class="ticket-spine-place">Arnakke<br>Gaard<br>Svinninge</div>
+          </div>
+        </div>
+
+        <div class="ticket-stub reveal delay-2">
+          <div class="ticket-body">
+            <div class="ticket-type">Endags&shy;billet</div>
+            <div class="ticket-sub">En dag — dit valg</div>
+            <ul class="ticket-list">
+              <li>1 dags adgang</li>
+              <li>Musik</li>
+              <li>Events</li>
+            </ul>
+          </div>
+          <div class="ticket-spine">
+            <div class="ticket-spine-date">9.–12.<br>Juli</div>
+            <div class="ticket-spine-place">Arnakke<br>Gaard<br>Svinninge</div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="tickets-note reveal">Mere info om priser kommer snart — følg med her.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section class="about section-pad" id="om">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="label">Om festivalen</div>
+        <h2 class="display">Fælles&shy;skab<br>under<br><em>trækronerne.</em></h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-text">
+          <p class="reveal">
+            Arnakke Festival er en tre dages festival på Arnakke Gaard i Svinninge, med musik, taler, dans, mad og leg! Festivalen startede som en fødselsdagsfest i gårdens baghave i 2020, hvor corona-epidemien havde tvunget de store festivaler i knæ.
+          </p>
+          <p class="reveal">
+            Festivalen startede som en fødselsdagsfest i gårdens baghave i 2020, hvor corona-epidemien havde tvunget de store festivaler i knæ.
+            50 smukke unge mennesker, der kunne slænge sig i hængekøjer i solen og danse sammen under træerne i diskokuglens skær.
+          </p>
+          <p class="reveal">
+            Siden er festivalen kun vokset sig større og smukkere. Her bliver traktorer og mejetærskere kørt til side og giver plads til koncerter, talks og langborde fyldt med overdådig lokal mad, så vi i fællesskab kan skabe nogle fortryllende dage sammen.
+          </p>
+          <blockquote class="about-quote reveal">
+            Vi ønsker at være en festival med fokus på fællesskab og nærhed — hvor vi griber hinanden i musikken og legen, og kommer tæt på hinanden.
+          </blockquote>
+          <p class="reveal">
+            I år er det <strong>syvende gang</strong> at festivalen holdes, og vi synes at DU skal med, uanset om du er ny eller gammel. Så tag dine venner under armen og inviter dem til begivenheden!
+          </p>
+        </div>
+
+        <div class="about-photo reveal delay-2">
+          <img
+            src="pictures/644197648_10225393789032285_704237211470836647_n.jpg"
+            alt="Hængekøjer i solen på Arnakke Gaard"
+            loading="lazy"
+          >
+          <div class="about-photo-cap">Arnakke Gaard — Svinninge, sommer</div>
         </div>
       </div>
-      <div class="ticket-card reveal tilt-card">
-        <div class="tilt-inner">
-          <h3>Endagsbillet</h3>
-          <p class="ticket-price">275 kr.</p>
-          <ul class="ticket-features">
-            <li>1 dags adgang</li>
-            <li>Musik</li>
-            <li>Events</li>
-          </ul>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALLERY
+  ============================================================ -->
+  <section class="gallery" id="galleri">
+    <div class="gallery-header container">
+      <div class="reveal">
+        <div class="label">Billeder</div>
+        <h2 class="display">Fra<br><em>festivalen.</em></h2>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="photo-frame gp1 reveal">
+        <img
+          src="pictures/643933367_10225393789112287_4713457347324767130_n.jpg"
+          alt="Festivalpublikum under træerne"
+          loading="lazy"
+        >
+      </div>
+      <div class="photo-frame gp2 reveal delay-1">
+        <img
+          src="pictures/644054653_10225393790272316_1448987091061679748_n.jpg"
+          alt="Dans under telt med farverige lys"
+          loading="lazy"
+        >
+      </div>
+      <div class="photo-frame gp3 reveal delay-1">
+        <img
+          src="pictures/643399977_10225393789072286_3729430864800315056_n.jpg"
+          alt="Mad og fællesskab under hvidt tag"
+          loading="lazy"
+        >
+      </div>
+      <div class="photo-frame gp4 reveal delay-2">
+        <img
+          src="pictures/644197648_10225393789032285_704237211470836647_n.jpg"
+          alt="Hængekøjer i det gyldne lys"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROGRAM
+  ============================================================ -->
+  <section class="program section-pad" id="program">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="label">Program</div>
+        <h2 class="display">Line&shy;up</h2>
+        <p class="program-sub">Navne og program offentliggøres løbende.</p>
+      </div>
+
+      <div class="program-days">
+        <div class="program-day reveal delay-1">
+          <div class="day-name">Onsdag</div>
+          <div class="day-date">9. Juli</div>
+          <div class="day-tba">TBA</div>
+        </div>
+        <div class="program-day reveal delay-2">
+          <div class="day-name">Torsdag</div>
+          <div class="day-date">10. Juli</div>
+          <div class="day-tba">TBA</div>
+        </div>
+        <div class="program-day reveal delay-3">
+          <div class="day-name">Fredag</div>
+          <div class="day-date">11. Juli</div>
+          <div class="day-tba">TBA</div>
+        </div>
+        <div class="program-day reveal delay-3">
+          <div class="day-name">Lørdag</div>
+          <div class="day-date">12. Juli</div>
+          <div class="day-tba">TBA</div>
         </div>
       </div>
-    </div>
 
-  </section>
-
-
-  <!-- About -->
-  <section class="about" id="om" style="position: relative; overflow: hidden;">
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="reveal">
-      <h2 class="section-title">Hvad er Arnakke Festival?</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="about-content">
-      <p class="reveal">
-        De sidste 6 år har Arnakke Gaard huset festivalen. I en forlænget weekend i sommeren er det lokale landbrug blevet suppleret med opdyrkning af fællesskaber, musikoplevelser og langbordsmiddage.
-      </p>
-      <p class="reveal">
-        Igen i år gentager vi succesen, og vi synes at du skal med. Vi har fokus på nærhed, både ift. til de lokale råvarer menuen er bygget op omkring, de mennesker festivalen fyldes af, og at musikoplevelsen kommer helt tæt på. Arnakke bringer nye minder og venner i nærheden af dig.
-      </p>
-      <p class="reveal" style="font-size: 1.2rem; font-weight: 600; color: var(--green);">
-        Og så ses vi i skoven til Arnakke Festival
-      </p>
-
-      <div class="about-video reveal-scale">
-        <iframe src="https://www.youtube.com/watch?v=OLDCUIxuKFM" title="Arnakke Festival" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-      </div>
     </div>
   </section>
 
-  <!-- Practical info -->
-  <section class="practical">
-    <div class="reveal">
-      <h2 class="section-title">Praktisk info</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="practical-content">
-      <p class="reveal">Arnakke Festival foregår fra <strong>onsdag d. 9/7 til lørdag d. 12/7</strong>.</p>
-      <p class="reveal">Musikprogram, menu og mere information kommer løbende.</p>
-      <p class="reveal">Hvis du har spørgsmål, så henvend dig til en af begivenhedens administratorer.</p>
-    </div>
-  </section>
-
-  <!-- Wave: Practical → Lineup -->
-  <svg class="wave wave-bottom" viewBox="0 0 1440 80" preserveAspectRatio="none">
-    <path fill="#1a1a2e" d="M0,0 L0,40 C360,-20 1080,80 1440,40 L1440,0 Z"/>
-  </svg>
-
-  <!-- Lineup -->
-  <section class="lineup" id="lineup">
-    <div class="reveal">
-      <h2 class="section-title shimmer-text">Lineup</h2>
-      <p class="section-subtitle">3 dage med fantastisk musik under trækronerne.</p>
-    </div>
-
-    <div class="lineup-grid stagger-children">
-      <div class="artist-card headliner reveal">
-        <p class="artist-name">Kanye West</p>
-        <p class="artist-tag">Headliner</p>
-      </div>
-      <div class="artist-card reveal">
-        <p class="artist-name">Nik & Jay</p>
-        <p class="artist-tag">Torsdag</p>
-      </div>
-      <div class="artist-card reveal">
-        <p class="artist-name">Drake</p>
-        <p class="artist-tag">Torsdag</p>
-      </div>
-      <div class="artist-card reveal">
-        <p class="artist-name">2Pac</p>
-        <p class="artist-tag">Fredag</p>
-      </div>
-      <div class="artist-card reveal">
-        <p class="artist-name">Michael Jackson</p>
-        <p class="artist-tag">Fredag</p>
-      </div>
-      <div class="artist-card reveal">
-        <p class="artist-name">Bon Iver</p>
-        <p class="artist-tag">Lørdag</p>
-      </div>
-    </div>
-
-    <p class="more-coming reveal">Flere navne offentliggøres løbende!</p>
-  </section>
-
-  <!-- Wave: Lineup → English -->
-  <svg class="wave wave-top" viewBox="0 0 1440 80" preserveAspectRatio="none">
-    <path fill="#ffffff" d="M0,40 C480,100 960,0 1440,40 L1440,80 L0,80 Z"/>
-  </svg>
-
-  <!-- English version -->
-  <section class="english" id="english">
-    <div class="reveal">
-      <h2 class="section-title">English Version</h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="english-content">
-      <div class="lang-divider"><span>English</span></div>
+  <!-- ============================================================
+       PRACTICAL INFO
+  ============================================================ -->
+  <section class="practical section-pad" id="praktisk">
+    <div class="container">
 
       <div class="reveal">
-        <p style="font-size: 1.2rem; font-weight: 700; color: var(--gray-800);">
-          ARNAKKE FESTIVAL – 9-12 July 2026
-        </p>
-        <p>
-          Once again this year, Arnakke Festival welcomes you to 3 unforgettable summer days. We look forward to seeing you for a celebration beneath the treetops.
-        </p>
+        <div class="label">Praktisk info</div>
+        <h2 class="display">Find<br>vej.</h2>
       </div>
 
-      <h3 class="reveal">Ticket Sales</h3>
-      <div class="reveal">
-        <p>Partout - 575 kr.<br>One day ticket - 275 kr.</p>
-        <p>With the all-access ticket, enjoy 3 days of music, events, food, and endless fellowship.</p>
+      <div class="practical-grid">
+        <div class="practical-block reveal delay-1">
+          <h3>Datoer &amp; Sted</h3>
+          <p>Arnakke Festival foregår fra <strong>onsdag d. 9/7 til lørdag d. 12/7 2026</strong> på Arnakke Gaard i Svinninge.</p>
+          <p>Der vil løbende komme information om musikprogram, events, transport, mad mm.</p>
+        </div>
+        <div class="practical-block reveal delay-2">
+          <h3>Spørgsmål</h3>
+          <p>Hvis du har spørgsmål, så henvend dig til en af begivenhedens administratorer.</p>
+        </div>
       </div>
 
-      <h3 class="reveal">What is Arnakke Festival?</h3>
-      <div class="reveal">
-        <p>
-          For the past 6 years, Arnakke Gaard has hosted the festival. During an extended summer weekend, local farming is complemented by the cultivation of communities, musical experiences, and long-table dinners. This year, we're repeating the success—and we believe you should be a part of it.
-        </p>
-        <p>
-          We emphasize closeness, from the local produce that shapes our menu, to the people who fill the festival, and the intimate musical experience. Arnakke brings new memories and friends close to you.
-        </p>
-        <p style="font-weight: 600; color: var(--gray-800);">
-          See you in the forest at Arnakke Festival.
-        </p>
-      </div>
-
-      <h3 class="reveal">Practical Info</h3>
-      <div class="reveal">
-        <p>Arnakke Festival takes place from Wednesday, 9th July to Saturday, 12th July.</p>
-        <p>The music program, menu, and further information will be announced continuously.</p>
-        <p>If you have any questions, please contact one of the event's administrators.</p>
-      </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ============================================================
+       ENGLISH
+  ============================================================ -->
+  <section class="english section-pad" id="english">
+    <div class="container">
+
+      <div class="reveal">
+        <div class="label">English Version</div>
+        <h2 class="display">For our<br>guests.</h2>
+      </div>
+
+      <div class="english-cols">
+        <div class="english-col">
+          <h3 class="reveal">Arnakke Festival — July 9–12, 2026</h3>
+          <p class="reveal">Once again this year, Arnakke Festival welcomes you to three unforgettable summer days for new and old friends alike. We can hardly wait to see you celebrating under the treetops — everyone is welcome!</p>
+
+          <h3 class="reveal">Tickets</h3>
+          <div class="reveal">
+            <p>Ticket sales open on <strong>March 26 at 6:00 PM</strong>. It will be possible to purchase both full festival passes and one-day tickets.</p>
+            <p>With a full festival pass, you get three days of music, events, workshops, homemade breakfast buns, long-table dinners with greens from the farm, parties for as long as you like, an affordable bar, and new friendships!</p>
+            <p>More information about ticket prices coming soon.</p>
+          </div>
+        </div>
+
+        <div class="english-col">
+          <h3 class="reveal">What is Arnakke Festival?</h3>
+          <div class="reveal">
+            <p>Arnakke Festival is a three-day festival held at Arnakke Gaard in Svinninge, featuring music, talks, dancing, food, and play! The festival began as a birthday party in the farm's backyard in 2020, when the COVID-19 pandemic had brought the major festivals to a halt. Arnakke Gaard opened its doors to 50 wonderful young people who could lounge in hammocks in the sun and dance together under the trees in the glow of a disco ball.</p>
+            <p>Tractors and harvesters are moved aside to make room for concerts, talks, and long tables filled with abundant local food. We strive to be a festival focused on community and closeness — where we truly come close to one another!</p>
+            <p>This year marks the <strong>seventh edition</strong> of the festival. So grab your friends and invite them to the event!</p>
+          </div>
+
+          <h3 class="reveal">Practical Info</h3>
+          <div class="reveal">
+            <p>Arnakke Festival takes place from <strong>Wednesday, July 9th to Saturday, July 12th, 2026</strong>.</p>
+            <p>Information about the music program, events, transportation, food, and more will be shared on an ongoing basis.</p>
+            <p>If you have any questions, please contact one of the event administrators.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
   <footer>
-    <p class="footer-title">Arnakke Festival</p>
-    <div class="socials">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Kontakt</a>
-    </div>
-    <p class="copy">&copy; 2026 Arnakke Festival. Alle rettigheder forbeholdes.</p>
+    <img src="logo-hero.png" alt="Arnakke Festival" class="footer-logo">
+    <ul class="footer-links">
+      <li><a href="#billetter">Billetter</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+    <p class="footer-copy">&copy; 2026 Arnakke Festival. Alle rettigheder forbeholdes.</p>
   </footer>
 
   <script>
-    // Navbar scroll effect
-    const nav = document.querySelector('nav');
+    // ── Navbar ──────────────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ── Mobile menu ─────────────────────────────────────────────
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks   = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
     });
 
-    // Mobile menu toggle
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
+    // ── Hero parallax ───────────────────────────────────────────
+    const heroBg = document.getElementById('heroBg');
+    const vh = window.innerHeight;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y < vh * 1.2) {
+        heroBg.style.transform = `translateY(${y * 0.28}px)`;
+      }
+    }, { passive: true });
 
-    // Close menu on link click
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        toggle.classList.remove('open');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    // Scroll reveal with Intersection Observer
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+    // ── Scroll reveal ───────────────────────────────────────────
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('v');
+          io.unobserve(e.target);
         }
       });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
+    }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
 
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // Floating particles
-    const particlesContainer = document.getElementById('particles');
-    const colors = ['#4ecdc4', '#a855f7', '#ff6b9d', '#ffc53a', '#ff8a47'];
-
-    function createParticle() {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-      const size = Math.random() * 8 + 4;
-      const color = colors[Math.floor(Math.random() * colors.length)];
-      const duration = Math.random() * 20 + 15;
-      const left = Math.random() * 100;
-
-      particle.style.width = size + 'px';
-      particle.style.height = size + 'px';
-      particle.style.background = color;
-      particle.style.left = left + '%';
-      particle.style.animationDuration = duration + 's';
-      particle.style.animationDelay = Math.random() * 10 + 's';
-
-      particlesContainer.appendChild(particle);
-
-      setTimeout(() => {
-        particle.remove();
-      }, (duration + 10) * 1000);
-    }
-
-    // Create initial particles
-    for (let i = 0; i < 15; i++) {
-      setTimeout(createParticle, i * 800);
-    }
-
-    // Keep creating particles
-    setInterval(createParticle, 3000);
-
-    // Parallax on hero
-    const hero = document.querySelector('.hero');
-    const heroContent = document.querySelector('.hero-content');
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      if (scrollY < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrollY * 0.3}px)`;
-        heroContent.style.opacity = 1 - (scrollY / window.innerHeight) * 0.8;
-      }
-    });
-
-    // Smooth counter animation for prices (visual flair on scroll)
-    const priceElements = document.querySelectorAll('.ticket-price');
-    const priceObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const text = el.textContent;
-          const match = text.match(/(\d+)/);
-          if (match) {
-            const target = parseInt(match[1]);
-            const suffix = text.replace(match[1], '').trim();
-            let current = 0;
-            const step = Math.ceil(target / 30);
-            const interval = setInterval(() => {
-              current += step;
-              if (current >= target) {
-                current = target;
-                clearInterval(interval);
-              }
-              el.textContent = current + ' ' + suffix;
-            }, 25);
-          }
-          priceObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    priceElements.forEach(el => priceObserver.observe(el));
-
-    // Scroll progress bar
-    const scrollProgress = document.getElementById('scrollProgress');
-    window.addEventListener('scroll', () => {
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = window.scrollY / docHeight;
-      scrollProgress.style.transform = `scaleX(${progress})`;
-    });
-
-    // Mouse glow follow
-    const mouseGlow = document.getElementById('mouseGlow');
-    let glowX = 0, glowY = 0, currentX = 0, currentY = 0;
-    document.addEventListener('mousemove', (e) => {
-      glowX = e.clientX;
-      glowY = e.clientY;
-    });
-    function animateGlow() {
-      currentX += (glowX - currentX) * 0.08;
-      currentY += (glowY - currentY) * 0.08;
-      mouseGlow.style.left = currentX + 'px';
-      mouseGlow.style.top = currentY + 'px';
-      requestAnimationFrame(animateGlow);
-    }
-    animateGlow();
-
-    // Starfield
-    const starfield = document.getElementById('starfield');
-    for (let i = 0; i < 80; i++) {
-      const star = document.createElement('div');
-      star.classList.add('star');
-      star.style.left = Math.random() * 100 + '%';
-      star.style.top = Math.random() * 100 + '%';
-      star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-      star.style.animationDelay = (Math.random() * 4) + 's';
-      const size = Math.random() * 2 + 1;
-      star.style.width = size + 'px';
-      star.style.height = size + 'px';
-      starfield.appendChild(star);
-    }
-
-    // Shooting stars
-    function createShootingStar() {
-      const star = document.createElement('div');
-      star.classList.add('shooting-star');
-      star.style.top = Math.random() * 50 + '%';
-      star.style.left = (Math.random() * 60 + 40) + '%';
-      star.style.animationDuration = (Math.random() * 0.5 + 0.5) + 's';
-      star.style.transform = `rotate(${Math.random() * 20 + 30}deg)`;
-      starfield.appendChild(star);
-      setTimeout(() => star.remove(), 1500);
-    }
-    setInterval(createShootingStar, 4000 + Math.random() * 3000);
-    setTimeout(createShootingStar, 2000);
-
-    // 3D tilt effect on ticket cards
-    document.querySelectorAll('.tilt-card').forEach(card => {
-      const inner = card.querySelector('.tilt-inner');
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / centerY * -8;
-        const rotateY = (x - centerX) / centerX * 8;
-        inner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        inner.style.transform = 'rotateX(0) rotateY(0)';
-      });
-    });
-
-    // Sparkle burst on CTA click
-    const cta = document.querySelector('.hero .cta');
-    cta.addEventListener('click', (e) => {
-      for (let i = 0; i < 12; i++) {
-        const sparkle = document.createElement('div');
-        sparkle.classList.add('sparkle');
-        const angle = (Math.PI * 2 / 12) * i;
-        const distance = 40 + Math.random() * 50;
-        sparkle.style.left = e.clientX + 'px';
-        sparkle.style.top = e.clientY + 'px';
-        sparkle.style.setProperty('--sx', Math.cos(angle) * distance + 'px');
-        sparkle.style.setProperty('--sy', Math.sin(angle) * distance + 'px');
-        const sparkleColors = ['#4ecdc4', '#a855f7', '#ff6b9d', '#ffc53a'];
-        sparkle.querySelector || null;
-        sparkle.style.setProperty('--green', sparkleColors[i % sparkleColors.length]);
-        document.body.appendChild(sparkle);
-        setTimeout(() => sparkle.remove(), 600);
-      }
-    });
-
-    // Typewriter effect on hero tagline
-    const tagline = document.querySelector('.hero .tagline');
-    const taglineText = tagline.textContent;
-    tagline.textContent = '';
-    const cursor = document.createElement('span');
-    cursor.classList.add('typewriter-cursor');
-    tagline.appendChild(cursor);
-    let charIndex = 0;
-    function typeChar() {
-      if (charIndex < taglineText.length) {
-        tagline.insertBefore(document.createTextNode(taglineText[charIndex]), cursor);
-        charIndex++;
-        setTimeout(typeChar, 35 + Math.random() * 25);
-      } else {
-        setTimeout(() => cursor.style.display = 'none', 2000);
-      }
-    }
-    // Start typing after hero animations complete
-    setTimeout(typeChar, 1400);
-
-    // Magnetic hover on CTA button
-    cta.addEventListener('mousemove', (e) => {
-      const rect = cta.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      cta.style.transform = `translateY(-3px) translate(${x * 0.15}px, ${y * 0.15}px)`;
-    });
-    cta.addEventListener('mouseleave', () => {
-      cta.style.transform = '';
-    });
+    reveals.forEach(el => io.observe(el));
   </script>
+
 </body>
 </html>
