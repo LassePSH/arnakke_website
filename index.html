@@ -470,9 +470,44 @@
       line-height: 1.5;
     }
 
+    .ticket-price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .ticket-price-main {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--terra);
+      line-height: 1;
+    }
+
+    .ticket-price-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--forest);
+      background: var(--sage);
+      padding: 0.15em 0.5em;
+      align-self: center;
+    }
+
+    .ticket-price-normal {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      align-self: center;
+    }
+
     .tickets-note {
       font-family: 'Courier Prime', monospace;
-      font-size: 0.68rem;
+      font-size: 0.7rem; 
       letter-spacing: 0.12em;
       color: var(--muted);
       margin-top: 2rem;
@@ -890,15 +925,11 @@
           <div class="ticket-body">
             <div class="ticket-type">Partout</div>
             <div class="ticket-sub">Fuld festival — 3 dage</div>
-            <ul class="ticket-list">
-              <li>3 dages musik</li>
-              <li>Events &amp; workshops</li>
-              <li>Hjemmebagte morgenboller</li>
-              <li>Langbordsmiddage med grønt fra gården</li>
-              <li>Fest så længe du har lyst</li>
-              <li>Billig bar</li>
-              <li>Nye bekendtskaber</li>
-            </ul>
+            <div class="ticket-price">
+              <span class="ticket-price-main">600 kr.</span>
+              <span class="ticket-price-label">Early bird</span>
+              <span class="ticket-price-normal">700 kr. normalpris</span>
+            </div>
           </div>
           <div class="ticket-spine">
             <div class="ticket-spine-date">9.–12.<br>Juli</div>
@@ -910,21 +941,18 @@
           <div class="ticket-body">
             <div class="ticket-type">Endags&shy;billet</div>
             <div class="ticket-sub">En dag — dit valg</div>
-            <ul class="ticket-list">
-              <li>1 dags adgang</li>
-              <li>Musik</li>
-              <li>Events</li>
-            </ul>
+            <div class="ticket-price">
+              <span class="ticket-price-main">300 kr.</span>
+            </div>
           </div>
           <div class="ticket-spine">
             <div class="ticket-spine-date">9.–12.<br>Juli</div>
             <div class="ticket-spine-place">Arnakke<br>Gaard<br>Svinninge</div>
           </div>
         </div>
-
       </div>
 
-      <p class="tickets-note reveal">Mere info om priser kommer snart — følg med her.</p>
+      <p class="tickets-note reveal">Med alle billeter får du musik, events, workshops, hjemmebagte morgenboller, langbordsmiddage med grønt fra gården, fest så længe du har lyst, billig bar og nye bekendtskaber!</p>
     </div>
   </section>
 
@@ -957,14 +985,14 @@
           <p class="reveal">
             I år er det <strong>syvende gang</strong> at festivalen holdes, og vi synes at DU skal med, uanset om du er ny eller gammel. Så tag dine venner under armen og inviter dem til begivenheden!
           </p>
-          <!-- <div class="about-video reveal">
+          <div class="about-video reveal">
             <iframe
               src="https://www.youtube.com/embed/OLDCUIxuKFM"
               title="Arnakke Festival"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
-          </div> -->
+          </div>
         </div>
 
         <div class="about-photo reveal delay-2">
@@ -1051,11 +1079,6 @@
           <div class="day-date">11. Juli</div>
           <div class="day-tba">TBA</div>
         </div>
-        <div class="program-day reveal delay-3">
-          <div class="day-name">Søndag</div>
-          <div class="day-date">12. Juli</div>
-          <div class="day-tba">Oprydning</div>
-        </div>
       </div>
 
     </div>
@@ -1138,8 +1161,8 @@
     <img src="logo-hero.png" alt="Arnakke Festival" class="footer-logo">
     <ul class="footer-links">
       <li><a href="#billetter">Billetter</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Facebook</a></li>
+      <li><a href="https://www.instagram.com/arnakkefestival/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.facebook.com/events/1520549316741750" target="_blank">Facebook</a></li>
       <li><a href="#">Kontakt</a></li>
     </ul>
     <p class="footer-copy">&copy; 2026 Arnakke Festival. Alle rettigheder forbeholdes.</p>
