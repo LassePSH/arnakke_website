@@ -11,6 +11,52 @@
   <style>
 
     /* ============================================================
+       ARNAKKE FONT (Briar)
+    ============================================================ */
+    @font-face {
+      font-family: 'Arnakke';
+      src: url('fonts/arnakke_font/Briar-Light.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Arnakke';
+      src: url('fonts/arnakke_font/Briar-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Arnakke';
+      src: url('fonts/arnakke_font/Briar-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Arnakke';
+      src: url('fonts/arnakke_font/Briar-SemiBold.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Arnakke';
+      src: url('fonts/arnakke_font/Briar-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Arnakke';
+      src: url('fonts/arnakke_font/Briar-ExtraBold.otf') format('opentype');
+      font-weight: 800;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Arnakke';
+      src: url('fonts/arnakke_font/Briar-Black.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    /* ============================================================
        RESET & BASE
     ============================================================ */
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -218,8 +264,14 @@
     }
 
     .hero-logo {
-      width: min(360px, 70vw);
-      filter: drop-shadow(0 4px 32px rgba(0,0,0,0.5));
+      font-family: 'Arnakke', Georgia, serif;
+      font-weight: 450;
+      font-size: clamp(3.5rem, 14vw, 5rem);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: var(--paper);
+      text-shadow: 0 4px 32px rgba(0,0,0,0.5);
+      text-transform: uppercase;
     }
 
     .hero-date-pill {
@@ -344,9 +396,9 @@
     }
 
     .display {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-weight: 900;
-      font-size: clamp(3rem, 7.5vw, 6.5rem);
+      font-family: 'Arnakke', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 5.5vw, 4.5rem);
       line-height: 0.9;
       letter-spacing: -0.025em;
       color: var(--ink);
@@ -901,7 +953,7 @@
   <section class="hero" id="top">
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-content">
-      <img src="logo-hero.png" alt="Arnakke Festival" class="hero-logo">
+      <h1 class="hero-logo">Arnakke<br>Festival</h1>
       <div class="hero-date-pill">9.–12. Juli 2026</div>
       <p class="hero-tagline">Tre uforglemmelige sommerdage under trækronerne</p>
     </div>
@@ -934,7 +986,7 @@
 
       <div class="reveal">
         <div class="label">Billetsalg</div>
-        <h2 class="display">Kom<br>med.</h2>
+        <h2 class="display">Kom<br>med</h2>
         <p class="ticket-opening">Salget åbner <strong>26. marts kl. 18:00</strong></p>
       </div>
 
@@ -983,7 +1035,7 @@
 
       <div class="reveal">
         <div class="label">Om festivalen</div>
-        <h2 class="display">Fælles&shy;skab<br>under<br><em>trækronerne.</em></h2>
+        <h2 class="display">Fælles&shy;skab<br>under<br><em>trækronerne</em></h2>
       </div>
 
       <div class="about-layout">
@@ -1033,7 +1085,7 @@
     <div class="gallery-header container">
       <div class="reveal">
         <div class="label">Billeder</div>
-        <h2 class="display">Fra<br><em>festivalen.</em></h2>
+        <h2 class="display">Fra<br><em>festivalen</em></h2>
       </div>
     </div>
 
@@ -1152,7 +1204,7 @@
 
       <div class="reveal">
         <div class="label">Praktisk info</div>
-        <h2 class="display">Find<br>vej.</h2>
+        <h2 class="display">Find<br>vej</h2>
       </div>
 
       <div class="practical-grid">
@@ -1178,7 +1230,7 @@
 
       <div class="reveal">
         <div class="label">English Version</div>
-        <h2 class="display">For our<br>guests.</h2>
+        <h2 class="display">For our<br>guests</h2>
       </div>
 
       <div class="english-cols">
