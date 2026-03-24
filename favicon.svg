@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,700&amp;display=swap');
+      text { font-family: 'Bodoni Moda', Georgia, serif; }
+    </style>
+  </defs>
+  <rect width="32" height="32" fill="#253527"/>
+  <text x="16" y="26" font-size="27" font-weight="700" font-style="italic" text-anchor="middle" fill="#C09030">A</text>
+</svg>
