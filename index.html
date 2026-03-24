@@ -570,11 +570,35 @@
 
     .tickets-note {
       font-family: 'Courier Prime', monospace;
-      font-size: 0.7rem; 
+      font-size: 0.7rem;
       letter-spacing: 0.12em;
       color: var(--muted);
       margin-top: 2rem;
       text-align: center;
+    }
+
+    .ticket-buy-wrap {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .ticket-buy-btn {
+      display: inline-block;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--paper);
+      background: var(--terra);
+      padding: 1rem 2.5rem;
+      border: none;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .ticket-buy-btn:hover {
+      background: var(--ink);
+      color: var(--gold);
     }
 
     /* ============================================================
@@ -1024,6 +1048,10 @@
       </div>
 
       <p class="tickets-note reveal">Med alle billeter får du musik, events, workshops, hjemmebagte morgenboller, langbordsmiddage med grønt fra gården, fest så længe du har lyst, billig bar og nye bekendtskaber!</p>
+
+      <div class="ticket-buy-wrap reveal">
+        <a class="ticket-buy-btn" href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435" target="_blank" rel="noopener">Køb billetter</a>
+      </div>
     </div>
   </section>
 
@@ -1243,6 +1271,9 @@
             <p>Ticket sales open on <strong>March 26 at 6:00 PM</strong>. It will be possible to purchase both full festival passes and one-day tickets.</p>
             <p>With a full festival pass, you get three days of music, events, workshops, homemade breakfast buns, long-table dinners with greens from the farm, parties for as long as you like, an affordable bar, and new friendships!</p>
             <p>More information about ticket prices coming soon.</p>
+            <div class="ticket-buy-wrap" style="text-align:left; margin-top:1.5rem;">
+              <a class="ticket-buy-btn" href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435" target="_blank" rel="noopener">Buy tickets</a>
+            </div>
           </div>
         </div>
 
