@@ -571,7 +571,7 @@
 
     .tickets-note {
       font-family: 'Courier Prime', monospace;
-      font-size: 0.7rem;
+      font-size: 1rem;
       letter-spacing: 0.12em;
       color: var(--muted);
       margin-top: 2rem;
@@ -586,7 +586,7 @@
     .ticket-buy-btn {
       display: inline-block;
       font-family: 'Courier Prime', monospace;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--paper);
@@ -965,6 +965,16 @@
       color: rgba(122, 112, 96, 0.45);
     }
 
+    /* ============================================================
+       REDUCED MOTION
+    ============================================================ */
+    @media (prefers-reduced-motion: reduce) {
+      body::before { animation: none; }
+      .hero-content, .hero-scroll { animation: none; opacity: 1; }
+      .scroll-line { animation: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
   </style>
 </head>
 <body>
@@ -1063,7 +1073,7 @@
         </div>
       </div>
 
-      <p class="tickets-note reveal">Med alle billeter får du musik, events, workshops, hjemmebagte morgenboller, langbordsmiddage med grønt fra gården, fest så længe du har lyst, billig bar og nye bekendtskaber! Alle billetter inkluderer et årsmedlemskab til foreningen Arnakke Festival.</p>
+      <p class="tickets-note reveal">Alle billetter inkluderer morgenmad, fælles langbordsmiddag samt et års medlemskab af foreningen Arnakke Festival.</p>
 
       <div class="ticket-buy-wrap reveal">
         <a class="ticket-buy-btn" href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435" target="_blank" rel="noopener">Køb billetter</a>
@@ -1288,9 +1298,8 @@
 
           <h3 class="reveal">Tickets</h3>
           <div class="reveal">
-            <p>Ticket sales open on <strong>March 26 at 6:00 PM</strong>. It will be possible to purchase both full festival passes and one-day tickets.</p>
+            <p>Tickets are now on sale! You can purchase both full festival passes and one-day tickets.</p>
             <p>With a full festival pass, you get three days of music, events, workshops, homemade breakfast buns, long-table dinners with greens from the farm, parties for as long as you like, an affordable bar, and new friendships!</p>
-            <p>More information about ticket prices coming soon.</p>
             <div class="ticket-buy-wrap" style="text-align:left; margin-top:1.5rem;">
               <a class="ticket-buy-btn" href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435" target="_blank" rel="noopener">Buy tickets</a>
             </div>
@@ -1326,7 +1335,7 @@
       <li><a href="#billetter">Billetter</a></li>
       <li><a href="https://www.instagram.com/arnakkefestival/" target="_blank">Instagram</a></li>
       <li><a href="https://www.facebook.com/events/1520549316741750" target="_blank">Facebook</a></li>
-      <li><a href="#">Kontakt</a></li>
+
     </ul>
     <p class="footer-copy">&copy; 2026 Arnakke Festival. Alle rettigheder forbeholdes.</p>
   </footer>
@@ -1348,13 +1357,16 @@
 
     // ── Hero parallax ───────────────────────────────────────────
     const heroBg = document.getElementById('heroBg');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const vh = window.innerHeight;
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      if (y < vh * 1.2) {
-        heroBg.style.transform = `translateY(${y * 0.28}px)`;
-      }
-    }, { passive: true });
+    if (!reducedMotion) {
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+        if (y < vh * 1.2) {
+          heroBg.style.transform = `translateY(${y * 0.28}px)`;
+        }
+      }, { passive: true });
+    }
 
     // ── Scroll reveal ───────────────────────────────────────────
     const reveals = document.querySelectorAll('.reveal');
