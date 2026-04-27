@@ -22,27 +22,39 @@ Single-file architecture — all HTML, CSS, and JavaScript live in `index.html`:
 
 - **CSS**: Defined in a `<style>` block in `<head>`. All styles are inline — no external stylesheets.
 - **JavaScript**: Defined in a `<script>` block at the bottom of `<body>`. Vanilla JS, no libraries.
-- **Assets**: Images in `pictures/`, logos (`logo.png`, `logo-hero.png`, `logo-clean.png`) in root.
+- **Assets**: Images in `pictures/`; logos (`logo.png`, `logo-hero.png`, `logo-clean.png`), `favicon.svg`, and `CNAME` in root. Custom font files in `fonts/arnakke_font/` (ArneF, weights 300–900).
+- **`logo-circle-preview.html`**: standalone preview file for logo work, not part of the live site.
 
 ### CSS Custom Properties (color palette)
 ```
---paper: #F2EAD7   --ink: #1A1612    --forest: #253527
---terra: #B8351A   --gold: #C09030   --sage: #7A9175   --muted: #7A7060
+--paper: #F2EAD7      --paper-dark: #E0D4BA   --cream: #FAF5EC
+--ink:   #1A1612      --forest:     #253527
+--terra: #B8351A      --gold:       #C09030
+--sage:  #7A9175      --muted:      #7A7060
 ```
 
-### Fonts (Google Fonts)
-- `Lora` — body text
-- `Bodoni Moda` — display headings
-- `Courier Prime` — UI labels/monospace
+### Fonts
+- `Arnakke` (custom, self-hosted ArneF, weights 300–900) — display headings (`.hero-logo`, `.display`)
+- `Bodoni Moda` (Google) — italic/quote accents, ticket type, day-date
+- `Lora` (Google) — body text
+- `Courier Prime` (Google) — UI labels, nav, monospace
 
 ### Page Sections (in order)
 Navigation → Hero → Info Strip → Tickets → About → Gallery → Program → Practical Info → English (translated) → Footer
 
+### Visual Effects
+- Animated SVG film-grain overlay on `body::before` (paused under `prefers-reduced-motion`)
+- Hero dual gradient overlay: red bloom top + dark vignette bottom
+- Photo frames have sepia/contrast filter and radial vignette via `::after`
+
 ### JavaScript Features
-- Navbar scroll detection (`.scrolled` class)
-- Mobile hamburger menu toggle
-- Hero parallax (28% scroll speed)
+- Navbar scroll detection (`.scrolled` class at `scrollY > 60`)
+- Mobile hamburger menu toggle (closes on link click)
+- Hero parallax (28% scroll speed; disabled under `prefers-reduced-motion`)
 - Scroll reveal via `IntersectionObserver` (`.reveal` elements get `.v` class; stagger with `.delay-1/2/3`)
+
+### Accessibility
+`@media (prefers-reduced-motion: reduce)` disables film grain, hero animation, scroll-line pulse, and reveal transitions.
 
 ### Responsive Breakpoint
 Mobile layout at `720px`.
