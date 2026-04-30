@@ -1,1390 +1,1768 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arnakke Festival 2026 — 9.–12. Juli</title>
-  <meta name="description" content="Arnakke Festival 9.–12. Juli 2026. Musik, fællesskab og sommerstemning under trækronerne på Arnakke Gaard i Svinninge.">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700;1,6..96,900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
-  <style>
-
-    /* ============================================================
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arnakke Festival 2026 — 9.–12. Juli</title>
+        <meta
+            name="description"
+            content="Arnakke Festival 9.–12. Juli 2026. Musik, fællesskab og sommerstemning under trækronerne på Arnakke Gaard i Svinninge."
+        />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700;1,6..96,900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            /* ============================================================
        ARNAKKE FONT (ArneF)
     ============================================================ */
-    @font-face {
-      font-family: 'Arnakke';
-      src: url('fonts/arnakke_font/ArneF-Light.otf') format('opentype');
-      font-weight: 300;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Arnakke';
-      src: url('fonts/arnakke_font/ArneF-Regular.otf') format('opentype');
-      font-weight: 400;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Arnakke';
-      src: url('fonts/arnakke_font/ArneF-Medium.otf') format('opentype');
-      font-weight: 500;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Arnakke';
-      src: url('fonts/arnakke_font/ArneF-SemiBold.otf') format('opentype');
-      font-weight: 600;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Arnakke';
-      src: url('fonts/arnakke_font/ArneF-Bold.otf') format('opentype');
-      font-weight: 700;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Arnakke';
-      src: url('fonts/arnakke_font/ArneF-ExtraBold.otf') format('opentype');
-      font-weight: 800;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Arnakke';
-      src: url('fonts/arnakke_font/ArneF-Black.otf') format('opentype');
-      font-weight: 900;
-      font-style: normal;
-    }
+            @font-face {
+                font-family: "Arnakke";
+                src: url("fonts/arnakke_font/ArneF-Light.otf")
+                    format("opentype");
+                font-weight: 300;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Arnakke";
+                src: url("fonts/arnakke_font/ArneF-Regular.otf")
+                    format("opentype");
+                font-weight: 400;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Arnakke";
+                src: url("fonts/arnakke_font/ArneF-Medium.otf")
+                    format("opentype");
+                font-weight: 500;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Arnakke";
+                src: url("fonts/arnakke_font/ArneF-SemiBold.otf")
+                    format("opentype");
+                font-weight: 600;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Arnakke";
+                src: url("fonts/arnakke_font/ArneF-Bold.otf") format("opentype");
+                font-weight: 700;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Arnakke";
+                src: url("fonts/arnakke_font/ArneF-ExtraBold.otf")
+                    format("opentype");
+                font-weight: 800;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "Arnakke";
+                src: url("fonts/arnakke_font/ArneF-Black.otf")
+                    format("opentype");
+                font-weight: 900;
+                font-style: normal;
+            }
 
-    /* ============================================================
+            /* ============================================================
        RESET & BASE
     ============================================================ */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+            *,
+            *::before,
+            *::after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-    :root {
-      --paper:       #F2EAD7;
-      --paper-dark:  #E0D4BA;
-      --ink:         #1A1612;
-      --forest:      #253527;
-      --terra:       #B8351A;
-      --gold:        #C09030;
-      --sage:        #7A9175;
-      --muted:       #7A7060;
-      --cream:       #FAF5EC;
-    }
+            :root {
+                --paper: #f2ead7;
+                --paper-dark: #e0d4ba;
+                --ink: #1a1612;
+                --forest: #253527;
+                --terra: #b8351a;
+                --gold: #c09030;
+                --sage: #7a9175;
+                --muted: #7a7060;
+                --cream: #faf5ec;
+            }
 
-    html { scroll-behavior: smooth; }
+            html {
+                scroll-behavior: smooth;
+            }
 
-    body {
-      font-family: 'Lora', Georgia, serif;
-      background: var(--paper);
-      color: var(--ink);
-      overflow-x: hidden;
-    }
+            body {
+                font-family: "Lora", Georgia, serif;
+                background: var(--paper);
+                color: var(--ink);
+                overflow-x: hidden;
+            }
 
-    /* ============================================================
+            /* ============================================================
        FILM GRAIN
     ============================================================ */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: -100%;
-      width: 300%;
-      height: 300%;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
-      opacity: 0.042;
-      pointer-events: none;
-      z-index: 9000;
-      animation: filmgrain 6s steps(7) infinite;
-    }
+            body::before {
+                content: "";
+                position: fixed;
+                inset: -100%;
+                width: 300%;
+                height: 300%;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.88' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+                opacity: 0.042;
+                pointer-events: none;
+                z-index: 9000;
+                animation: filmgrain 6s steps(7) infinite;
+            }
 
-    @keyframes filmgrain {
-      0%   { transform: translate(0,   0); }
-      14%  { transform: translate(-7%, -12%); }
-      28%  { transform: translate(9%,  5%); }
-      42%  { transform: translate(-4%, 20%); }
-      57%  { transform: translate(13%, -9%); }
-      71%  { transform: translate(-9%, 13%); }
-      85%  { transform: translate(4%,  -20%); }
-      100% { transform: translate(0,   0); }
-    }
+            @keyframes filmgrain {
+                0% {
+                    transform: translate(0, 0);
+                }
+                14% {
+                    transform: translate(-7%, -12%);
+                }
+                28% {
+                    transform: translate(9%, 5%);
+                }
+                42% {
+                    transform: translate(-4%, 20%);
+                }
+                57% {
+                    transform: translate(13%, -9%);
+                }
+                71% {
+                    transform: translate(-9%, 13%);
+                }
+                85% {
+                    transform: translate(4%, -20%);
+                }
+                100% {
+                    transform: translate(0, 0);
+                }
+            }
 
-    /* ============================================================
+            /* ============================================================
        NAVIGATION
     ============================================================ */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 500;
-      padding: 1.4rem 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background 0.5s ease, border-color 0.5s ease, backdrop-filter 0.5s ease;
-      border-bottom: 1px solid transparent;
-    }
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 500;
+                padding: 1.4rem 2.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                transition:
+                    background 0.5s ease,
+                    border-color 0.5s ease,
+                    backdrop-filter 0.5s ease;
+                border-bottom: 1px solid transparent;
+            }
 
-    nav.scrolled {
-      background: rgba(242, 234, 215, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom-color: var(--paper-dark);
-    }
+            nav.scrolled {
+                background: rgba(242, 234, 215, 0.92);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-bottom-color: var(--paper-dark);
+            }
 
-    .nav-wordmark {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.9);
-      text-decoration: none;
-      transition: color 0.5s;
-    }
+            .nav-wordmark {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.7rem;
+                letter-spacing: 0.25em;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.9);
+                text-decoration: none;
+                transition: color 0.5s;
+            }
 
-    nav.scrolled .nav-wordmark { color: var(--ink); }
+            nav.scrolled .nav-wordmark {
+                color: var(--ink);
+            }
 
-    .nav-links {
-      display: flex;
-      gap: 2.2rem;
-      list-style: none;
-    }
+            .nav-links {
+                display: flex;
+                gap: 2.2rem;
+                list-style: none;
+            }
 
-    .nav-links a {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: rgba(255,255,255,0.65);
-      transition: color 0.3s;
-    }
+            .nav-links a {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.68rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.65);
+                transition: color 0.3s;
+            }
 
-    nav.scrolled .nav-links a { color: var(--muted); }
-    .nav-links a:hover { color: var(--terra) !important; }
+            nav.scrolled .nav-links a {
+                color: var(--muted);
+            }
+            .nav-links a:hover {
+                color: var(--terra) !important;
+            }
 
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
-      padding: 4px;
-    }
+            .menu-toggle {
+                display: none;
+                background: none;
+                border: none;
+                cursor: pointer;
+                flex-direction: column;
+                gap: 5px;
+                padding: 4px;
+            }
 
-    .menu-toggle span {
-      display: block;
-      width: 22px;
-      height: 1.5px;
-      background: rgba(255,255,255,0.85);
-      transition: background 0.5s;
-    }
+            .menu-toggle span {
+                display: block;
+                width: 22px;
+                height: 1.5px;
+                background: rgba(255, 255, 255, 0.85);
+                transition: background 0.5s;
+            }
 
-    nav.scrolled .menu-toggle span { background: var(--ink); }
+            nav.scrolled .menu-toggle span {
+                background: var(--ink);
+            }
 
-    @media (max-width: 720px) {
-      .menu-toggle { display: flex; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%; left: 0; right: 0;
-        background: var(--paper);
-        padding: 1.5rem 2.5rem 2rem;
-        flex-direction: column;
-        gap: 1.2rem;
-        border-bottom: 1px solid var(--paper-dark);
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { color: var(--muted); font-size: 0.75rem; }
+            @media (max-width: 720px) {
+                .menu-toggle {
+                    display: flex;
+                }
+                .nav-links {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background: var(--paper);
+                    padding: 1.5rem 2.5rem 2rem;
+                    flex-direction: column;
+                    gap: 1.2rem;
+                    border-bottom: 1px solid var(--paper-dark);
+                }
+                .nav-links.open {
+                    display: flex;
+                }
+                .nav-links a {
+                    color: var(--muted);
+                    font-size: 0.75rem;
+                }
 
-      .info-strip-inner {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.4rem;
-      }
-      .info-strip-dot { display: none; }
-      .info-strip-item {
-        padding: 0.2rem 0;
-        text-align: center;
-      }
-    }
+                .info-strip-inner {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.4rem;
+                }
+                .info-strip-dot {
+                    display: none;
+                }
+                .info-strip-item {
+                    padding: 0.2rem 0;
+                    text-align: center;
+                }
+            }
 
-    /* ============================================================
+            /* ============================================================
        HERO
     ============================================================ */
-    .hero {
-      position: relative;
-      height: 100svh;
-      min-height: 620px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
+            .hero {
+                position: relative;
+                height: 100svh;
+                min-height: 620px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
 
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image: url('pictures/header.jpg');
-      background-size: cover;
-      background-position: center 45%;
-      will-change: transform;
-    }
+            .hero-bg {
+                position: absolute;
+                inset: 0;
+                background-image: url("pictures/header.jpg");
+                background-size: cover;
+                background-position: center 45%;
+                will-change: transform;
+            }
 
-    /* Dual overlay: subtle red bloom at top + deep darkening at bottom */
-    .hero-bg::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 50% at 50% 10%, rgba(160, 35, 10, 0.22) 0%, transparent 65%),
-        linear-gradient(to bottom,
-          rgba(18, 12, 8, 0.25) 0%,
-          rgba(18, 12, 8, 0.1)  45%,
-          rgba(18, 12, 8, 0.72) 100%
-        );
-    }
+            /* Dual overlay: subtle red bloom at top + deep darkening at bottom */
+            .hero-bg::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(
+                        ellipse 80% 50% at 50% 10%,
+                        rgba(160, 35, 10, 0.22) 0%,
+                        transparent 65%
+                    ),
+                    linear-gradient(
+                        to bottom,
+                        rgba(18, 12, 8, 0.25) 0%,
+                        rgba(18, 12, 8, 0.1) 45%,
+                        rgba(18, 12, 8, 0.72) 100%
+                    );
+            }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.6rem;
-      opacity: 0;
-      animation: fadeUp 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
-    }
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.6rem;
+                opacity: 0;
+                animation: fadeUp 1.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s
+                    forwards;
+            }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+            @keyframes fadeUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(24px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
 
-    .hero-logo {
-      font-family: 'Arnakke', Georgia, serif;
-      font-weight: 450;
-      font-size: clamp(3.5rem, 14vw, 5rem);
-      letter-spacing: 0.04em;
-      line-height: 1;
-      color: var(--paper);
-      text-shadow: 0 4px 32px rgba(0,0,0,0.5);
-      text-transform: uppercase;
-    }
+            .hero-logo {
+                font-family: "Arnakke", Georgia, serif;
+                font-weight: 450;
+                font-size: clamp(3.5rem, 14vw, 5rem);
+                letter-spacing: 0.04em;
+                line-height: 1;
+                color: var(--paper);
+                text-shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+                text-transform: uppercase;
+            }
 
-    .hero-date-pill {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.82);
-      border: 1px solid rgba(255,255,255,0.28);
-      padding: 0.45em 1.4em;
-    }
+            .hero-date-pill {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.72rem;
+                letter-spacing: 0.32em;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.82);
+                border: 1px solid rgba(255, 255, 255, 0.28);
+                padding: 0.45em 1.4em;
+            }
 
-    .hero-tagline {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(0.95rem, 2.2vw, 1.3rem);
-      color: rgba(255,255,255,0.6);
-      line-height: 1.5;
-    }
+            .hero-tagline {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-style: italic;
+                font-weight: 400;
+                font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+                color: rgba(255, 255, 255, 0.6);
+                line-height: 1.5;
+            }
 
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.6rem;
-      opacity: 0;
-      animation: fadeUp 2s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
-    }
+            .hero-scroll {
+                position: absolute;
+                bottom: 2.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.6rem;
+                opacity: 0;
+                animation: fadeUp 2s cubic-bezier(0.22, 1, 0.36, 1) 1.2s
+                    forwards;
+            }
 
-    .scroll-line {
-      width: 1px;
-      height: 44px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.45), transparent);
-      animation: pulse 2.2s ease-in-out infinite;
-    }
+            .scroll-line {
+                width: 1px;
+                height: 44px;
+                background: linear-gradient(
+                    to bottom,
+                    rgba(255, 255, 255, 0.45),
+                    transparent
+                );
+                animation: pulse 2.2s ease-in-out infinite;
+            }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 0.45; transform: scaleY(1); }
-      50%       { opacity: 0.9;  transform: scaleY(1.15); }
-    }
+            @keyframes pulse {
+                0%,
+                100% {
+                    opacity: 0.45;
+                    transform: scaleY(1);
+                }
+                50% {
+                    opacity: 0.9;
+                    transform: scaleY(1.15);
+                }
+            }
 
-    .scroll-label {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.58rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.38);
-    }
+            .scroll-label {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.58rem;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.38);
+            }
 
-    /* ============================================================
+            /* ============================================================
        INFO STRIP
     ============================================================ */
-    .info-strip {
-      background: var(--forest);
-      padding: 1rem clamp(1.5rem, 5vw, 4rem);
-    }
+            .info-strip {
+                background: var(--forest);
+                padding: 1rem clamp(1.5rem, 5vw, 4rem);
+            }
 
-    .info-strip-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      flex-wrap: wrap;
-    }
+            .info-strip-inner {
+                max-width: 1100px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0;
+                flex-wrap: wrap;
+            }
 
-    .info-strip-item {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(242, 234, 215, 0.55);
-      padding: 0.3rem 1.8rem;
-    }
+            .info-strip-item {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.68rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: rgba(242, 234, 215, 0.55);
+                padding: 0.3rem 1.8rem;
+            }
 
-    .info-strip-item strong { color: rgba(242, 234, 215, 0.9); font-weight: 700; }
+            .info-strip-item strong {
+                color: rgba(242, 234, 215, 0.9);
+                font-weight: 700;
+            }
 
-    .info-strip-dot {
-      color: rgba(242, 234, 215, 0.2);
-      font-size: 0.5rem;
-    }
+            .info-strip-dot {
+                color: rgba(242, 234, 215, 0.2);
+                font-size: 0.5rem;
+            }
 
-    /* ============================================================
+            /* ============================================================
        SHARED SECTION UTILITIES
     ============================================================ */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+            .container {
+                max-width: 1100px;
+                margin: 0 auto;
+            }
 
-    .section-pad {
-      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
-    }
+            .section-pad {
+                padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+            }
 
-    .label {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      margin-bottom: 1.4rem;
-    }
+            .label {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.65rem;
+                letter-spacing: 0.32em;
+                text-transform: uppercase;
+                color: var(--muted);
+                display: flex;
+                align-items: center;
+                gap: 0.9rem;
+                margin-bottom: 1.4rem;
+            }
 
-    .label::after {
-      content: '';
-      display: block;
-      width: 48px;
-      height: 1px;
-      background: currentColor;
-      opacity: 0.45;
-      flex-shrink: 0;
-    }
+            .label::after {
+                content: "";
+                display: block;
+                width: 48px;
+                height: 1px;
+                background: currentColor;
+                opacity: 0.45;
+                flex-shrink: 0;
+            }
 
-    .display {
-      font-family: 'Arnakke', Georgia, serif;
-      font-weight: 600;
-      font-size: clamp(2rem, 5.5vw, 4.5rem);
-      line-height: 0.9;
-      letter-spacing: -0.025em;
-      color: var(--ink);
-    }
+            .display {
+                font-family: "Arnakke", Georgia, serif;
+                font-weight: 600;
+                font-size: clamp(2rem, 5.5vw, 4.5rem);
+                line-height: 0.9;
+                letter-spacing: -0.025em;
+                color: var(--ink);
+            }
 
-    .display em {
-      font-style: italic;
-      color: var(--terra);
-    }
+            .display em {
+                font-style: italic;
+                color: var(--terra);
+            }
 
-    /* Reveal on scroll */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition:
-        opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
-    }
+            /* Reveal on scroll */
+            .reveal {
+                opacity: 0;
+                transform: translateY(28px);
+                transition:
+                    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+            }
 
-    .reveal.v { opacity: 1; transform: translateY(0); }
-    .reveal.delay-1 { transition-delay: 0.12s; }
-    .reveal.delay-2 { transition-delay: 0.24s; }
-    .reveal.delay-3 { transition-delay: 0.36s; }
+            .reveal.v {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .reveal.delay-1 {
+                transition-delay: 0.12s;
+            }
+            .reveal.delay-2 {
+                transition-delay: 0.24s;
+            }
+            .reveal.delay-3 {
+                transition-delay: 0.36s;
+            }
 
-    /* ============================================================
+            /* ============================================================
        TICKETS
     ============================================================ */
-    .tickets {
-      background: var(--cream);
-    }
+            .tickets {
+                background: var(--cream);
+            }
 
-    .ticket-opening {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-style: italic;
-      font-size: clamp(1rem, 2.2vw, 1.4rem);
-      color: var(--terra);
-      margin-top: 1.2rem;
-      font-weight: 400;
-    }
+            .ticket-opening {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-style: italic;
+                font-size: clamp(1rem, 2.2vw, 1.4rem);
+                color: var(--terra);
+                margin-top: 1.2rem;
+                font-weight: 400;
+            }
 
-    .ticket-opening strong {
-      font-style: normal;
-      font-weight: 700;
-    }
+            .ticket-opening strong {
+                font-style: normal;
+                font-weight: 700;
+            }
 
-    .tickets-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-    }
+            .tickets-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+                margin-top: 3.5rem;
+            }
 
-    .ticket-stub {
-      background: var(--paper);
-      border: 1px solid var(--paper-dark);
-      display: flex;
-    }
+            .ticket-stub {
+                background: var(--paper);
+                border: 1px solid var(--paper-dark);
+                display: flex;
+            }
 
-    .ticket-body {
-      flex: 1;
-      padding: 2rem 1.8rem;
-    }
+            .ticket-body {
+                flex: 1;
+                padding: 2rem 1.8rem;
+            }
 
-    .ticket-type {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-weight: 900;
-      font-size: 2rem;
-      color: var(--ink);
-      line-height: 1;
-      margin-bottom: 0.2rem;
-    }
+            .ticket-type {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-weight: 900;
+                font-size: 2rem;
+                color: var(--ink);
+                line-height: 1;
+                margin-bottom: 0.2rem;
+            }
 
-    .ticket-sub {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.8rem;
-    }
+            .ticket-sub {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.6rem;
+                letter-spacing: 0.22em;
+                text-transform: uppercase;
+                color: var(--muted);
+                margin-bottom: 1.8rem;
+            }
 
-    .ticket-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-    }
+            .ticket-list {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 0.55rem;
+            }
 
-    .ticket-list li {
-      font-size: 0.88rem;
-      color: var(--ink);
-      line-height: 1.4;
-      display: flex;
-      gap: 0.7rem;
-      align-items: flex-start;
-    }
+            .ticket-list li {
+                font-size: 0.88rem;
+                color: var(--ink);
+                line-height: 1.4;
+                display: flex;
+                gap: 0.7rem;
+                align-items: flex-start;
+            }
 
-    .ticket-list li::before {
-      content: '—';
-      font-family: 'Courier Prime', monospace;
-      color: var(--terra);
-      flex-shrink: 0;
-    }
+            .ticket-list li::before {
+                content: "—";
+                font-family: "Courier Prime", monospace;
+                color: var(--terra);
+                flex-shrink: 0;
+            }
 
-    .ticket-spine {
-      width: 100px;
-      background: var(--ink);
-      padding: 1.5rem 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.6rem;
-      border-left: 1.5px dashed var(--paper-dark);
-      flex-shrink: 0;
-    }
+            .ticket-spine {
+                width: 100px;
+                background: var(--ink);
+                padding: 1.5rem 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.6rem;
+                border-left: 1.5px dashed var(--paper-dark);
+                flex-shrink: 0;
+            }
 
-    .ticket-spine-date {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-style: italic;
-      font-weight: 700;
-      font-size: 1.05rem;
-      color: var(--gold);
-      line-height: 1.2;
-    }
+            .ticket-spine-date {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-style: italic;
+                font-weight: 700;
+                font-size: 1.05rem;
+                color: var(--gold);
+                line-height: 1.2;
+            }
 
-    .ticket-spine-place {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.55rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(242, 234, 215, 0.45);
-      line-height: 1.5;
-    }
+            .ticket-spine-place {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.55rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: rgba(242, 234, 215, 0.45);
+                line-height: 1.5;
+            }
 
-    .ticket-price {
-      display: flex;
-      align-items: baseline;
-      gap: 0.6rem;
-      margin-bottom: 1.8rem;
-      flex-wrap: wrap;
-    }
+            .ticket-price {
+                display: flex;
+                align-items: baseline;
+                gap: 0.6rem;
+                margin-bottom: 1.8rem;
+                flex-wrap: wrap;
+            }
 
-    .ticket-price-main {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--terra);
-      line-height: 1;
-    }
+            .ticket-price-main {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-size: 2rem;
+                font-weight: 900;
+                color: var(--terra);
+                line-height: 1;
+            }
 
-    .ticket-price-label {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--forest);
-      background: var(--sage);
-      padding: 0.15em 0.5em;
-      align-self: center;
-    }
+            .ticket-price-label {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.6rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--forest);
+                background: var(--sage);
+                padding: 0.15em 0.5em;
+                align-self: center;
+            }
 
-    .ticket-price-normal {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      align-self: center;
-    }
+            .ticket-price-normal {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.65rem;
+                letter-spacing: 0.1em;
+                color: var(--muted);
+                align-self: center;
+            }
 
-    .tickets-note {
-      font-family: 'Courier Prime', monospace;
-      font-size: 1rem;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-      margin-top: 2rem;
-      text-align: center;
-    }
+            .tickets-note {
+                font-family: "Courier Prime", monospace;
+                font-size: 1rem;
+                letter-spacing: 0.12em;
+                color: var(--muted);
+                margin-top: 2rem;
+                text-align: center;
+            }
 
-    .ticket-buy-wrap {
-      text-align: center;
-      margin-top: 2.5rem;
-    }
+            .ticket-buy-wrap {
+                text-align: center;
+                margin-top: 2.5rem;
+            }
 
-    .ticket-buy-btn {
-      display: inline-block;
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--paper);
-      background: var(--terra);
-      padding: 1rem 2.5rem;
-      border: none;
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
+            .ticket-buy-btn {
+                display: inline-block;
+                font-family: "Courier Prime", monospace;
+                font-size: 0.8rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--paper);
+                background: var(--terra);
+                padding: 1rem 2.5rem;
+                border: none;
+                text-decoration: none;
+                transition:
+                    background 0.2s,
+                    color 0.2s;
+            }
 
-    .ticket-buy-btn:hover {
-      background: var(--ink);
-      color: var(--gold);
-    }
+            .ticket-buy-btn:hover {
+                background: var(--ink);
+                color: var(--gold);
+            }
 
-    /* ============================================================
+            /* ============================================================
        ABOUT
     ============================================================ */
-    .about {
-      background: var(--ink);
-    }
+            .about {
+                background: var(--ink);
+            }
 
-    .about .label { color: var(--sage); }
-    .about .label::after { background: var(--sage); }
-    .about .display { color: var(--paper); }
-    .about .display em { color: var(--gold); }
+            .about .label {
+                color: var(--sage);
+            }
+            .about .label::after {
+                background: var(--sage);
+            }
+            .about .display {
+                color: var(--paper);
+            }
+            .about .display em {
+                color: var(--gold);
+            }
 
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(2.5rem, 6vw, 6rem);
-      margin-top: 4rem;
-      align-items: start;
-    }
+            .about-layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: clamp(2.5rem, 6vw, 6rem);
+                margin-top: 4rem;
+                align-items: start;
+            }
 
-    .about-text p {
-      font-size: clamp(0.9rem, 1.4vw, 1.05rem);
-      line-height: 1.85;
-      color: rgba(242, 234, 215, 0.78);
-      margin-bottom: 1.4rem;
-    }
+            .about-text p {
+                font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+                line-height: 1.85;
+                color: rgba(242, 234, 215, 0.78);
+                margin-bottom: 1.4rem;
+            }
 
-    .about-text p:last-child { margin-bottom: 0; }
+            .about-text p:last-child {
+                margin-bottom: 0;
+            }
 
-    .about-text strong { color: var(--gold); font-weight: 500; }
+            .about-text strong {
+                color: var(--gold);
+                font-weight: 500;
+            }
 
-    .about-quote {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-style: italic;
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      color: var(--gold);
-      line-height: 1.5;
-      border-left: 2px solid var(--terra);
-      padding-left: 1.5rem;
-      margin: 2rem 0 2.2rem;
-    }
+            .about-quote {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-style: italic;
+                font-size: clamp(1.1rem, 2vw, 1.5rem);
+                color: var(--gold);
+                line-height: 1.5;
+                border-left: 2px solid var(--terra);
+                padding-left: 1.5rem;
+                margin: 2rem 0 2.2rem;
+            }
 
-    .about-photo {
-      position: sticky;
-      top: 6rem;
-    }
+            .about-photo {
+                position: sticky;
+                top: 6rem;
+            }
 
-    .about-photo img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      display: block;
-      filter: sepia(0.1) contrast(1.05);
-    }
+            .about-photo img {
+                width: 100%;
+                aspect-ratio: 3/4;
+                object-fit: cover;
+                display: block;
+                filter: sepia(0.1) contrast(1.05);
+            }
 
-    .about-photo-cap {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-top: 0.8rem;
-      opacity: 0.7;
-    }
+            .about-photo-cap {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.6rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--sage);
+                margin-top: 0.8rem;
+                opacity: 0.7;
+            }
 
-    .about-video {
-      margin-top: 2.5rem;
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16/9;
-    }
+            .about-video {
+                margin-top: 2.5rem;
+                position: relative;
+                width: 100%;
+                aspect-ratio: 16/9;
+            }
 
-    .about-video iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+            .about-video iframe {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
 
-    @media (max-width: 720px) {
-      .about-layout { grid-template-columns: 1fr; }
-      .about-photo { position: static; order: -1; }
-      .about-photo img { aspect-ratio: 16/10; }
-    }
+            @media (max-width: 720px) {
+                .about-layout {
+                    grid-template-columns: 1fr;
+                }
+                .about-photo {
+                    position: static;
+                    order: -1;
+                }
+                .about-photo img {
+                    aspect-ratio: 16/10;
+                }
+            }
 
-    /* ============================================================
+            /* ============================================================
        GALLERY
     ============================================================ */
-    .gallery {
-      background: var(--paper);
-      padding-bottom: clamp(5rem, 10vw, 9rem);
-    }
+            .gallery {
+                background: var(--paper);
+                padding-bottom: clamp(5rem, 10vw, 9rem);
+            }
 
-    .gallery-header {
-      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem) 0;
-    }
+            .gallery-header {
+                padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem) 0;
+            }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: clamp(0.6rem, 1.2vw, 1rem);
-      margin-top: 2.5rem;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-      max-width: 1100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                gap: clamp(0.6rem, 1.2vw, 1rem);
+                margin-top: 2.5rem;
+                padding: 0 clamp(1.5rem, 5vw, 4rem);
+                max-width: 1100px;
+                margin-left: auto;
+                margin-right: auto;
+            }
 
-    .photo-frame {
-      overflow: hidden;
-      position: relative;
-      background: var(--ink);
-    }
+            .photo-frame {
+                overflow: hidden;
+                position: relative;
+                background: var(--ink);
+            }
 
-    .photo-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: sepia(0.12) contrast(1.07) saturate(0.9);
-      transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s;
-    }
+            .photo-frame img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                filter: sepia(0.12) contrast(1.07) saturate(0.9);
+                transition:
+                    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                    filter 0.5s;
+            }
 
-    .photo-frame:hover img {
-      transform: scale(1.04);
-      filter: sepia(0) contrast(1.04) saturate(1.05);
-    }
+            .photo-frame:hover img {
+                transform: scale(1.04);
+                filter: sepia(0) contrast(1.04) saturate(1.05);
+            }
 
-    /* Film vignette */
-    .photo-frame::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at center, transparent 60%, rgba(18,12,8,0.28) 100%);
-      pointer-events: none;
-    }
+            /* Film vignette */
+            .photo-frame::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(
+                    ellipse at center,
+                    transparent 60%,
+                    rgba(18, 12, 8, 0.28) 100%
+                );
+                pointer-events: none;
+            }
 
-    .gp1 { grid-column: 1 / 8; aspect-ratio: 16/10; }
-    .gp2 { grid-column: 8 / 13; aspect-ratio: 3/4; }
-    .gp3 { grid-column: 1 / 5; aspect-ratio: 3/4; }
-    .gp4 { grid-column: 5 / 13; aspect-ratio: 16/10; }
-    .gp5 { grid-column: 1 / 6; aspect-ratio: 16/10; }
-    .gp6 { grid-column: 6 / 10; aspect-ratio: 3/4; }
-    .gp7 { grid-column: 10 / 13; aspect-ratio: 3/4; }
-    .gp8 { grid-column: 1 / 4; aspect-ratio: 3/4; }
-    .gp9 { grid-column: 4 / 9; aspect-ratio: 16/10; }
-    .gp10 { grid-column: 9 / 13; aspect-ratio: 3/4; }
+            .gp1 {
+                grid-column: 1 / 8;
+                aspect-ratio: 16/10;
+            }
+            .gp2 {
+                grid-column: 8 / 13;
+                aspect-ratio: 3/4;
+            }
+            .gp3 {
+                grid-column: 1 / 5;
+                aspect-ratio: 3/4;
+            }
+            .gp4 {
+                grid-column: 5 / 13;
+                aspect-ratio: 16/10;
+            }
+            .gp5 {
+                grid-column: 1 / 6;
+                aspect-ratio: 16/10;
+            }
+            .gp6 {
+                grid-column: 6 / 10;
+                aspect-ratio: 3/4;
+            }
+            .gp7 {
+                grid-column: 10 / 13;
+                aspect-ratio: 3/4;
+            }
+            .gp8 {
+                grid-column: 1 / 4;
+                aspect-ratio: 3/4;
+            }
+            .gp9 {
+                grid-column: 4 / 9;
+                aspect-ratio: 16/10;
+            }
+            .gp10 {
+                grid-column: 9 / 13;
+                aspect-ratio: 3/4;
+            }
 
-    @media (max-width: 720px) {
-      .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .gp1, .gp2, .gp3, .gp4, .gp5, .gp6, .gp7, .gp8, .gp9, .gp10 {
-        grid-column: auto;
-        aspect-ratio: 4/3;
-      }
-    }
+            @media (max-width: 720px) {
+                .gallery-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .gp1,
+                .gp2,
+                .gp3,
+                .gp4,
+                .gp5,
+                .gp6,
+                .gp7,
+                .gp8,
+                .gp9,
+                .gp10 {
+                    grid-column: auto;
+                    aspect-ratio: 4/3;
+                }
+            }
 
-    /* ============================================================
+            /* ============================================================
        PROGRAM
     ============================================================ */
-    .program {
-      background: var(--forest);
-    }
+            .program {
+                background: var(--forest);
+            }
 
-    .program .label { color: var(--sage); }
-    .program .label::after { background: var(--sage); }
-    .program .display { color: var(--paper); }
+            .program .label {
+                color: var(--sage);
+            }
+            .program .label::after {
+                background: var(--sage);
+            }
+            .program .display {
+                color: var(--paper);
+            }
 
-    .program-sub {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-style: italic;
-      font-size: clamp(1rem, 2vw, 1.3rem);
-      color: rgba(242, 234, 215, 0.45);
-      margin-top: 1.2rem;
-    }
+            .program-sub {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-style: italic;
+                font-size: clamp(1rem, 2vw, 1.3rem);
+                color: rgba(242, 234, 215, 0.45);
+                margin-top: 1.2rem;
+            }
 
-    .program-days {
-      display: flex;
-      gap: clamp(0.6rem, 1.5vw, 1rem);
-      margin-top: 3.5rem;
-      flex-wrap: wrap;
-    }
+            .program-days {
+                display: flex;
+                gap: clamp(0.6rem, 1.5vw, 1rem);
+                margin-top: 3.5rem;
+                flex-wrap: wrap;
+            }
 
-    .program-day {
-      border: 1px solid rgba(122, 145, 117, 0.22);
-      padding: 1.4rem 1.8rem;
-      flex: 1;
-      min-width: 130px;
-    }
+            .program-day {
+                border: 1px solid rgba(122, 145, 117, 0.22);
+                padding: 1.4rem 1.8rem;
+                flex: 1;
+                min-width: 130px;
+            }
 
-    .day-name {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--sage);
-      margin-bottom: 0.4rem;
-    }
+            .day-name {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.6rem;
+                letter-spacing: 0.25em;
+                text-transform: uppercase;
+                color: var(--sage);
+                margin-bottom: 0.4rem;
+            }
 
-    .day-date {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--paper);
-      line-height: 1.1;
-    }
+            .day-date {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: var(--paper);
+                line-height: 1.1;
+            }
 
-    .day-tba {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.56rem;
-      letter-spacing: 0.2em;
-      color: rgba(242, 234, 215, 0.22);
-      margin-top: 0.5rem;
-    }
+            .day-tba {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.56rem;
+                letter-spacing: 0.2em;
+                color: rgba(242, 234, 215, 0.22);
+                margin-top: 0.5rem;
+            }
 
-    /* ============================================================
+            /* ============================================================
        PRACTICAL
     ============================================================ */
-    .practical {
-      background: var(--paper-dark);
-    }
+            .practical {
+                background: var(--paper-dark);
+            }
 
-    .practical-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(2rem, 5vw, 5rem);
-      margin-top: 3.5rem;
-      align-items: start;
-    }
+            .practical-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: clamp(2rem, 5vw, 5rem);
+                margin-top: 3.5rem;
+                align-items: start;
+            }
 
-    .practical-block h3 {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.62rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 1.1rem;
-      padding-bottom: 0.8rem;
-      border-bottom: 1px solid rgba(122, 112, 96, 0.3);
-    }
+            .practical-block h3 {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.62rem;
+                letter-spacing: 0.28em;
+                text-transform: uppercase;
+                color: var(--muted);
+                margin-bottom: 1.1rem;
+                padding-bottom: 0.8rem;
+                border-bottom: 1px solid rgba(122, 112, 96, 0.3);
+            }
 
-    .practical-block p {
-      font-size: 0.95rem;
-      line-height: 1.85;
-      color: var(--ink);
-      margin-bottom: 1rem;
-    }
+            .practical-block p {
+                font-size: 0.95rem;
+                line-height: 1.85;
+                color: var(--ink);
+                margin-bottom: 1rem;
+            }
 
-    .practical-block p:last-child { margin-bottom: 0; }
-    .practical-block strong { font-weight: 600; }
+            .practical-block p:last-child {
+                margin-bottom: 0;
+            }
+            .practical-block strong {
+                font-weight: 600;
+            }
 
-    .practical-map {
-      margin-top: clamp(2rem, 4vw, 3.5rem);
-      border-radius: 2px;
-      overflow: hidden;
-      aspect-ratio: 16 / 7;
-      border: 1px solid rgba(122, 112, 96, 0.25);
-    }
+            .practical-map {
+                margin-top: clamp(2rem, 4vw, 3.5rem);
+                border-radius: 2px;
+                overflow: hidden;
+                aspect-ratio: 16 / 7;
+                border: 1px solid rgba(122, 112, 96, 0.25);
+            }
 
-    .practical-map iframe {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
+            .practical-map iframe {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
 
-    @media (max-width: 720px) {
-      .practical-grid { grid-template-columns: 1fr; }
-      .practical-map { aspect-ratio: 4 / 3; }
-    }
+            @media (max-width: 720px) {
+                .practical-grid {
+                    grid-template-columns: 1fr;
+                }
+                .practical-map {
+                    aspect-ratio: 4 / 3;
+                }
+            }
 
-    /* ============================================================
+            /* ============================================================
        ENGLISH
     ============================================================ */
-    .english {
-      background: var(--ink);
-    }
+            .english {
+                background: var(--ink);
+            }
 
-    .english .label { color: var(--gold); }
-    .english .label::after { background: var(--gold); }
-    .english .display {
-      color: var(--paper);
-      font-size: clamp(2.4rem, 5.5vw, 5rem);
-    }
+            .english .label {
+                color: var(--gold);
+            }
+            .english .label::after {
+                background: var(--gold);
+            }
+            .english .display {
+                color: var(--paper);
+                font-size: clamp(2.4rem, 5.5vw, 5rem);
+            }
 
-    .english-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(2.5rem, 5vw, 5rem);
-      margin-top: 4rem;
-    }
+            .english-cols {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: clamp(2.5rem, 5vw, 5rem);
+                margin-top: 4rem;
+            }
 
-    .english-col h3 {
-      font-family: 'Bodoni Moda', Georgia, serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 0.8rem;
-      margin-top: 2.2rem;
-    }
+            .english-col h3 {
+                font-family: "Bodoni Moda", Georgia, serif;
+                font-size: 1.15rem;
+                font-weight: 700;
+                color: var(--gold);
+                margin-bottom: 0.8rem;
+                margin-top: 2.2rem;
+            }
 
-    .english-col h3:first-child { margin-top: 0; }
+            .english-col h3:first-child {
+                margin-top: 0;
+            }
 
-    .english-col p {
-      font-size: 0.9rem;
-      line-height: 1.85;
-      color: rgba(242, 234, 215, 0.7);
-      margin-bottom: 0.8rem;
-    }
+            .english-col p {
+                font-size: 0.9rem;
+                line-height: 1.85;
+                color: rgba(242, 234, 215, 0.7);
+                margin-bottom: 0.8rem;
+            }
 
-    .english-col p:last-child { margin-bottom: 0; }
-    .english-col strong { color: var(--paper); font-weight: 500; }
+            .english-col p:last-child {
+                margin-bottom: 0;
+            }
+            .english-col strong {
+                color: var(--paper);
+                font-weight: 500;
+            }
 
-    @media (max-width: 720px) {
-      .english-cols { grid-template-columns: 1fr; }
-    }
+            @media (max-width: 720px) {
+                .english-cols {
+                    grid-template-columns: 1fr;
+                }
+            }
 
-    /* ============================================================
+            /* ============================================================
        FOOTER
     ============================================================ */
-    footer {
-      background: var(--ink);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 3rem clamp(1.5rem, 5vw, 4rem);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.6rem;
-      text-align: center;
-    }
+            footer {
+                background: var(--ink);
+                border-top: 1px solid rgba(255, 255, 255, 0.06);
+                padding: 3rem clamp(1.5rem, 5vw, 4rem);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.6rem;
+                text-align: center;
+            }
 
-    .footer-logo {
-      height: 28px;
-      opacity: 0.35;
-      filter: invert(0);
-    }
+            .footer-logo {
+                height: 28px;
+                opacity: 0.35;
+                filter: invert(0);
+            }
 
-    .footer-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+            .footer-links {
+                display: flex;
+                gap: 2.5rem;
+                list-style: none;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
-    .footer-links a {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.65rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.25s;
-    }
+            .footer-links a {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.65rem;
+                letter-spacing: 0.22em;
+                text-transform: uppercase;
+                color: var(--muted);
+                text-decoration: none;
+                transition: color 0.25s;
+            }
 
-    .footer-links a:hover { color: var(--paper); }
+            .footer-links a:hover {
+                color: var(--paper);
+            }
 
-    .footer-copy {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.6rem;
-      letter-spacing: 0.12em;
-      color: rgba(122, 112, 96, 0.45);
-    }
+            .footer-copy {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.6rem;
+                letter-spacing: 0.12em;
+                color: rgba(122, 112, 96, 0.45);
+            }
 
-    /* ============================================================
+            /* ============================================================
        REDUCED MOTION
     ============================================================ */
-    @media (prefers-reduced-motion: reduce) {
-      body::before { animation: none; }
-      .hero-content, .hero-scroll { animation: none; opacity: 1; }
-      .scroll-line { animation: none; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- ============================================================
+            @media (prefers-reduced-motion: reduce) {
+                body::before {
+                    animation: none;
+                }
+                .hero-content,
+                .hero-scroll {
+                    animation: none;
+                    opacity: 1;
+                }
+                .scroll-line {
+                    animation: none;
+                }
+                .reveal {
+                    opacity: 1;
+                    transform: none;
+                    transition: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- ============================================================
        NAVIGATION
   ============================================================ -->
-  <nav id="navbar">
-    <a href="#" class="nav-wordmark">Arnakke Festival Forening</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Åbn menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#billetter">Billetter</a></li>
-      <li><a href="#om">Om</a></li>
-      <li><a href="#galleri">Billeder</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#praktisk">Praktisk</a></li>
-      <li><a href="#english">English</a></li>
-    </ul>
-  </nav>
+        <nav id="navbar">
+            <a href="#" class="nav-wordmark">Arnakke Festival Forening</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Åbn menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#billetter">Billetter</a></li>
+                <li><a href="#om">Om</a></li>
+                <li><a href="#galleri">Billeder</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#praktisk">Praktisk</a></li>
+                <li><a href="#english">English</a></li>
+            </ul>
+        </nav>
 
-  <!-- ============================================================
+        <!-- ============================================================
        HERO
   ============================================================ -->
-  <section class="hero" id="top">
-    <div class="hero-bg" id="heroBg"></div>
-    <div class="hero-content">
-      <h1 class="hero-logo">Arnakke<br>Festival</h1>
-      <div class="hero-date-pill">9.–12. Juli 2026</div>
-      <p class="hero-tagline">Bliv medlem af foreningen og vær med til tre uforglemmelige sommerdage under trækronerne</p>
-    </div>
-    <div class="hero-scroll">
-      <div class="scroll-line"></div>
-      <span class="scroll-label">Scroll</span>
-    </div>
-  </section>
+        <section class="hero" id="top">
+            <div class="hero-bg" id="heroBg"></div>
+            <div class="hero-content">
+                <h1 class="hero-logo">Arnakke<br />Festival</h1>
+                <div class="hero-date-pill">9.–12. Juli 2026</div>
+                <p class="hero-tagline">
+                    Bliv medlem af foreningen og vær med til tre uforglemmelige
+                    sommerdage under trækronerne
+                </p>
+            </div>
+            <div class="hero-scroll">
+                <div class="scroll-line"></div>
+                <span class="scroll-label">Scroll</span>
+            </div>
+        </section>
 
-  <!-- ============================================================
+        <!-- ============================================================
        INFO STRIP
   ============================================================ -->
-  <div class="info-strip">
-    <div class="info-strip-inner">
-      <!-- <span class="info-strip-item"><strong>Arnakke Gaard</strong> — Svinninge</span> -->
-      <!-- <span class="info-strip-dot">◆</span> -->
-      <!-- <span class="info-strip-item">Musik · Events · Mad · Fællesskab</span> -->
-      <!-- <span class="info-strip-dot">◆</span> -->
-      <span class="info-strip-item">Early Bird billetter frem til </span>
-      <span class="info-strip-item"><strong>1. Maj</strong></span>
-      <!-- <span class="info-strip-dot">◆</span> -->
-    </div>
-  </div>
+        <div class="info-strip">
+            <div class="info-strip-inner">
+                <!-- <span class="info-strip-item"><strong>Arnakke Gaard</strong> — Svinninge</span> -->
+                <!-- <span class="info-strip-dot">◆</span> -->
+                <!-- <span class="info-strip-item">Musik · Events · Mad · Fællesskab</span> -->
+                <!-- <span class="info-strip-dot">◆</span> -->
+                <span class="info-strip-item"
+                    >Early Bird billetter frem til
+                </span>
+                <span class="info-strip-item"><strong>1. Maj</strong></span>
+                <!-- <span class="info-strip-dot">◆</span> -->
+            </div>
+        </div>
 
-  <!-- ============================================================
+        <!-- ============================================================
        TICKETS
   ============================================================ -->
-  <section class="tickets section-pad" id="billetter">
-    <div class="container">
+        <section class="tickets section-pad" id="billetter">
+            <div class="container">
+                <div class="reveal">
+                    <div class="label">Billetsalg</div>
+                    <h2 class="display">Kom<br />med</h2>
+                    <p class="ticket-opening">
+                        Early Bird billetter frem til <strong>1. Maj</strong>
+                    </p>
+                </div>
 
-      <div class="reveal">
-        <div class="label">Billetsalg</div>
-        <h2 class="display">Kom<br>med</h2>
-        <p class="ticket-opening">Early Bird billetter frem til  <strong>1. Maj</strong></p>
-      </div>
+                <div class="tickets-grid">
+                    <div class="ticket-stub reveal delay-1">
+                        <div class="ticket-body">
+                            <div class="ticket-type">Partout</div>
+                            <div class="ticket-sub">Fuld festival — 3 dage</div>
+                            <div class="ticket-price">
+                                <span class="ticket-price-main">600 kr.</span>
+                                <span class="ticket-price-label"
+                                    >Early bird</span
+                                >
+                                <span class="ticket-price-normal"
+                                    >700 kr. normalpris</span
+                                >
+                            </div>
+                        </div>
+                        <div class="ticket-spine">
+                            <div class="ticket-spine-date">
+                                9.–12.<br />Juli
+                            </div>
+                            <div class="ticket-spine-place">
+                                Arnakke<br />Gaard<br />Svinninge
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="tickets-grid">
+                    <div class="ticket-stub reveal delay-2">
+                        <div class="ticket-body">
+                            <div class="ticket-type">Endags&shy;billet</div>
+                            <div class="ticket-sub">En dag — dit valg</div>
+                            <div class="ticket-price">
+                                <span class="ticket-price-main">300 kr.</span>
+                            </div>
+                        </div>
+                        <div class="ticket-spine">
+                            <div class="ticket-spine-date">
+                                9.–12.<br />Juli
+                            </div>
+                            <div class="ticket-spine-place">
+                                Arnakke<br />Gaard<br />Svinninge
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="ticket-stub reveal delay-1">
-          <div class="ticket-body">
-            <div class="ticket-type">Partout</div>
-            <div class="ticket-sub">Fuld festival — 3 dage</div>
-            <div class="ticket-price">
-              <span class="ticket-price-main">600 kr.</span>
-              <span class="ticket-price-label">Early bird</span>
-              <span class="ticket-price-normal">700 kr. normalpris</span>
+                <p class="tickets-note reveal">
+                    Alle billetter inkluderer morgenmad, fælles langbordsmiddag
+                    samt et års medlemskab af foreningen Arnakke Festival.
+                </p>
+
+                <div class="ticket-buy-wrap reveal">
+                    <a
+                        class="ticket-buy-btn"
+                        href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435"
+                        target="_blank"
+                        rel="noopener"
+                        >Køb billetter</a
+                    >
+                </div>
             </div>
-          </div>
-          <div class="ticket-spine">
-            <div class="ticket-spine-date">9.–12.<br>Juli</div>
-            <div class="ticket-spine-place">Arnakke<br>Gaard<br>Svinninge</div>
-          </div>
-        </div>
+        </section>
 
-        <div class="ticket-stub reveal delay-2">
-          <div class="ticket-body">
-            <div class="ticket-type">Endags&shy;billet</div>
-            <div class="ticket-sub">En dag — dit valg</div>
-            <div class="ticket-price">
-              <span class="ticket-price-main">300 kr.</span>
-            </div>
-          </div>
-          <div class="ticket-spine">
-            <div class="ticket-spine-date">9.–12.<br>Juli</div>
-            <div class="ticket-spine-place">Arnakke<br>Gaard<br>Svinninge</div>
-          </div>
-        </div>
-      </div>
-
-      <p class="tickets-note reveal">Alle billetter inkluderer morgenmad, fælles langbordsmiddag samt et års medlemskab af foreningen Arnakke Festival.</p>
-
-      <div class="ticket-buy-wrap reveal">
-        <a class="ticket-buy-btn" href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435" target="_blank" rel="noopener">Køb billetter</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+        <!-- ============================================================
        ABOUT
   ============================================================ -->
-  <section class="about section-pad" id="om">
-    <div class="container">
+        <section class="about section-pad" id="om">
+            <div class="container">
+                <div class="reveal">
+                    <div class="label">Om festivalen</div>
+                    <h2 class="display">
+                        Fælles&shy;skab<br />under<br /><em>trækronerne</em>
+                    </h2>
+                </div>
 
-      <div class="reveal">
-        <div class="label">Om festivalen</div>
-        <h2 class="display">Fælles&shy;skab<br>under<br><em>trækronerne</em></h2>
-      </div>
+                <div class="about-layout">
+                    <div class="about-text">
+                        <p class="reveal">
+                            Arnakke Festival er en tre dages festival på Arnakke
+                            Gaard i Svinninge, med musik, taler, dans, mad og
+                            leg!
+                        </p>
+                        <p class="reveal">
+                            Festivalen startede som en fødselsdagsfest i gårdens
+                            baghave i 2020, hvor corona-epidemien havde tvunget
+                            de store festivaler i knæ, og Arnakke Gaard åbnede
+                            dørene for 50 smukke unge mennesker, der kunne
+                            slænge sig i hængekøjer i solen og danse sammen
+                            under træerne i diskokuglens skær.
+                        </p>
+                        <p class="reveal">
+                            Siden har festivalen udviklet sig - og i begyndelsen
+                            af 2026, stiftede vi Arnakke Festival Forening, for
+                            at give vores allerede eksisterende engagement, en
+                            formel struktur. Hvad betyder det for dig? Når du
+                            køber din festivalbillet, bliver du samtidig medlem
+                            af Arnakke Festival Forening
+                        </p>
+                        <p class="reveal">
+                            Med foreningen ønsker vi, at skabe mere end blot en
+                            festival; vi vil skabe et varigt fællesskab, der år
+                            efter år fejres, når traktorer og mejetærskere
+                            bliver kørt til side og der bliver plads til
+                            koncerter, talks og langborde fyldt med overdådig
+                            lokal mad og nogle fortryllende dage sammen.
+                        </p>
+                        <blockquote class="about-quote reveal">
+                            Vi ønsker at være en festival med fokus på
+                            fællesskab og nærhed — hvor vi griber hinanden i
+                            musikken og legen, og kommer tæt på hinanden.
+                        </blockquote>
+                        <p class="reveal">
+                            I år er det <strong>syvende gang</strong> at
+                            festivalen holdes, og vi synes at DU skal med,
+                            uanset om du er ny eller gammel. Så tag dine venner
+                            under armen og inviter dem til begivenheden!
+                        </p>
+                        <div class="about-video reveal">
+                            <iframe
+                                src="https://www.youtube.com/embed/OLDCUIxuKFM"
+                                title="Arnakke Festival"
+                                allow="
+                                    accelerometer;
+                                    autoplay;
+                                    clipboard-write;
+                                    encrypted-media;
+                                    gyroscope;
+                                    picture-in-picture;
+                                "
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
 
-      <div class="about-layout">
-        <div class="about-text">
-          <p class="reveal">
-            Arnakke Festival er en tre dages festival på Arnakke Gaard i Svinninge, med musik, taler, dans, mad og leg!
-          </p>
-          <p class="reveal">
-           Festivalen startede som en fødselsdagsfest i gårdens baghave i 2020, hvor corona-epidemien havde tvunget de store festivaler i knæ, og Arnakke Gaard åbnede dørene for 50 smukke unge mennesker, der kunne slænge sig i hængekøjer i solen og danse sammen under træerne i diskokuglens skær. 
-          </p>
-          <p class="reveal">
-            Siden har festivalen udviklet sig - og i begyndelsen af 2026, stiftede vi Arnakke Festival Forening, for at give vores allerede eksisterende engagement, en formel struktur. Hvad betyder det for dig? Når du køber din festivalbillet, bliver du samtidig medlem af Arnakke Festival Forening
-          </p>
-          <p class="reveal">
-            Med foreningen ønsker vi, at skabe mere end blot en festival; vi vil skabe et varigt fællesskab, der år efter år fejres, når traktorer og mejetærskere bliver kørt til side og der bliver plads til koncerter, talks og langborde fyldt med overdådig lokal mad og nogle fortryllende dage sammen.
-          </p>
-          <blockquote class="about-quote reveal">
-            Vi ønsker at være en festival med fokus på fællesskab og nærhed — hvor vi griber hinanden i musikken og legen, og kommer tæt på hinanden.
-          </blockquote>
-          <p class="reveal">
-            I år er det <strong>syvende gang</strong> at festivalen holdes, og vi synes at DU skal med, uanset om du er ny eller gammel. Så tag dine venner under armen og inviter dem til begivenheden!
-          </p>
-          <div class="about-video reveal">
-            <iframe
-              src="https://www.youtube.com/embed/OLDCUIxuKFM"
-              title="Arnakke Festival"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
+                    <div class="about-photo reveal delay-2">
+                        <img
+                            src="pictures/644197648_10225393789032285_704237211470836647_n.jpg"
+                            alt="Hængekøjer i solen på Arnakke Gaard"
+                            loading="lazy"
+                        />
+                        <div class="about-photo-cap">
+                            Arnakke Gaard — Svinninge, sommer
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="about-photo reveal delay-2">
-          <img
-            src="pictures/644197648_10225393789032285_704237211470836647_n.jpg"
-            alt="Hængekøjer i solen på Arnakke Gaard"
-            loading="lazy"
-          >
-          <div class="about-photo-cap">Arnakke Gaard — Svinninge, sommer</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
+        <!-- ============================================================
        GALLERY
   ============================================================ -->
-  <section class="gallery" id="galleri">
-    <div class="gallery-header container">
-      <div class="reveal">
-        <div class="label">Billeder</div>
-        <h2 class="display">Fra<br><em>festivalen</em></h2>
-      </div>
-    </div>
+        <section class="gallery" id="galleri">
+            <div class="gallery-header container">
+                <div class="reveal">
+                    <div class="label">Billeder</div>
+                    <h2 class="display">Fra<br /><em>festivalen</em></h2>
+                </div>
+            </div>
 
-    <div class="gallery-grid">
-      <div class="photo-frame gp1 reveal">
-        <img
-          src="pictures/643933367_10225393789112287_4713457347324767130_n.jpg"
-          alt="Festivalpublikum under træerne"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp2 reveal delay-1">
-        <img
-          src="pictures/644054653_10225393790272316_1448987091061679748_n.jpg"
-          alt="Dans under telt med farverige lys"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp3 reveal delay-1">
-        <img
-          src="pictures/643399977_10225393789072286_3729430864800315056_n.jpg"
-          alt="Mad og fællesskab under hvidt tag"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp4 reveal delay-2">
-        <img
-          src="pictures/644197648_10225393789032285_704237211470836647_n.jpg"
-          alt="Hængekøjer i det gyldne lys"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp5 reveal">
-        <img
-          src="pictures/event1.jpg"
-          alt="Festivalevent"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp6 reveal delay-1">
-        <img
-          src="pictures/koncert1.jpg"
-          alt="Koncert på scenen"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp7 reveal delay-2">
-        <img
-          src="pictures/stemning1.jpg"
-          alt="Stemning ved festivalen"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp8 reveal">
-        <img
-          src="pictures/stemning13.jpg"
-          alt="Festivalsstemning"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp9 reveal delay-1">
-        <img
-          src="pictures/mad2.jpg"
-          alt="Mad og fællesskab"
-          loading="lazy"
-        >
-      </div>
-      <div class="photo-frame gp10 reveal delay-2">
-        <img
-          src="pictures/header.jpg"
-          alt="Festivalen på Arnakke Gaard"
-          loading="lazy"
-        >
-      </div>
-    </div>
-  </section>
+            <div class="gallery-grid">
+                <div class="photo-frame gp1 reveal">
+                    <img
+                        src="pictures/643933367_10225393789112287_4713457347324767130_n.jpg"
+                        alt="Festivalpublikum under træerne"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp2 reveal delay-1">
+                    <img
+                        src="pictures/644054653_10225393790272316_1448987091061679748_n.jpg"
+                        alt="Dans under telt med farverige lys"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp3 reveal delay-1">
+                    <img
+                        src="pictures/643399977_10225393789072286_3729430864800315056_n.jpg"
+                        alt="Mad og fællesskab under hvidt tag"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp4 reveal delay-2">
+                    <img
+                        src="pictures/644197648_10225393789032285_704237211470836647_n.jpg"
+                        alt="Hængekøjer i det gyldne lys"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp5 reveal">
+                    <img
+                        src="pictures/event1.jpg"
+                        alt="Festivalevent"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp6 reveal delay-1">
+                    <img
+                        src="pictures/koncert1.jpg"
+                        alt="Koncert på scenen"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp7 reveal delay-2">
+                    <img
+                        src="pictures/stemning1.jpg"
+                        alt="Stemning ved festivalen"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp8 reveal">
+                    <img
+                        src="pictures/stemning13.jpg"
+                        alt="Festivalsstemning"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp9 reveal delay-1">
+                    <img
+                        src="pictures/mad2.jpg"
+                        alt="Mad og fællesskab"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="photo-frame gp10 reveal delay-2">
+                    <img
+                        src="pictures/header.jpg"
+                        alt="Festivalen på Arnakke Gaard"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </section>
 
-  <!-- ============================================================
+        <!-- ============================================================
        PROGRAM
   ============================================================ -->
-  <section class="program section-pad" id="program">
-    <div class="container">
+        <section class="program section-pad" id="program">
+            <div class="container">
+                <div class="reveal">
+                    <div class="label">Program</div>
+                    <h2 class="display">Line&shy;up</h2>
+                    <p class="program-sub">
+                        Navne og program offentliggøres løbende.
+                    </p>
+                </div>
 
-      <div class="reveal">
-        <div class="label">Program</div>
-        <h2 class="display">Line&shy;up</h2>
-        <p class="program-sub">Navne og program offentliggøres løbende.</p>
-      </div>
+                <div class="program-days">
+                    <div class="program-day reveal delay-1">
+                        <div class="day-name">Torsdag</div>
+                        <div class="day-date">9. Juli</div>
+                        <div class="day-tba">TBA</div>
+                    </div>
+                    <div class="program-day reveal delay-2">
+                        <div class="day-name">Fredag</div>
+                        <div class="day-date">10. Juli</div>
+                        <div class="day-tba">TBA</div>
+                    </div>
+                    <div class="program-day reveal delay-3">
+                        <div class="day-name">Lørdag</div>
+                        <div class="day-date">11. Juli</div>
+                        <div class="day-tba">TBA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <div class="program-days">
-        <div class="program-day reveal delay-1">
-          <div class="day-name">Torsdag</div>
-          <div class="day-date">9. Juli</div>
-          <div class="day-tba">TBA</div>
-        </div>
-        <div class="program-day reveal delay-2">
-          <div class="day-name">Fredag</div>
-          <div class="day-date">10. Juli</div>
-          <div class="day-tba">TBA</div>
-        </div>
-        <div class="program-day reveal delay-3">
-          <div class="day-name">Lørdag</div>
-          <div class="day-date">11. Juli</div>
-          <div class="day-tba">TBA</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
+        <!-- ============================================================
        PRACTICAL INFO
   ============================================================ -->
-  <section class="practical section-pad" id="praktisk">
-    <div class="container">
+        <section class="practical section-pad" id="praktisk">
+            <div class="container">
+                <div class="reveal">
+                    <div class="label">Praktisk info</div>
+                    <h2 class="display">Find<br />vej</h2>
+                </div>
 
-      <div class="reveal">
-        <div class="label">Praktisk info</div>
-        <h2 class="display">Find<br>vej</h2>
-      </div>
+                <div class="practical-grid">
+                    <div class="practical-block reveal delay-1">
+                        <h3>Datoer &amp; Sted</h3>
+                        <p>
+                            Arnakke Festival foregår fra
+                            <strong
+                                >torsdag d. 9/7 til søndag d. 12/7 2026</strong
+                            >
+                            på Arnakke Gaard i Svinninge.
+                        </p>
+                        <p>
+                            Der vil løbende komme information om musikprogram,
+                            events, transport, mad mm.
+                        </p>
+                    </div>
+                    <div class="practical-block reveal delay-2">
+                        <h3>Spørgsmål</h3>
+                        <p>
+                            Hvis du har spørgsmål, så henvend dig til en af
+                            begivenhedens administratorer.
+                        </p>
+                    </div>
+                </div>
 
-      <div class="practical-grid">
-        <div class="practical-block reveal delay-1">
-          <h3>Datoer &amp; Sted</h3>
-          <p>Arnakke Festival foregår fra <strong>torsdag d. 9/7 til søndag d. 12/7 2026</strong> på Arnakke Gaard i Svinninge.</p>
-          <p>Der vil løbende komme information om musikprogram, events, transport, mad mm.</p>
-        </div>
-        <div class="practical-block reveal delay-2">
-          <h3>Spørgsmål</h3>
-          <p>Hvis du har spørgsmål, så henvend dig til en af begivenhedens administratorer.</p>
-        </div>
-      </div>
+                <div class="practical-map reveal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2285.0180355004795!2d11.421595299999998!3d55.724043599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464d83c5274466e9%3A0xa7df560363bb1d3c!2sArnakke%20Festival!5e1!3m2!1sda!2sdk!4v1774869551022!5m2!1sda!2sdk"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
 
-      <div class="practical-map reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2285.0180355004795!2d11.421595299999998!3d55.724043599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464d83c5274466e9%3A0xa7df560363bb1d3c!2sArnakke%20Festival!5e1!3m2!1sda!2sdk!4v1774869551022!5m2!1sda!2sdk" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
+        <!-- ============================================================
        ENGLISH
   ============================================================ -->
-  <section class="english section-pad" id="english">
-    <div class="container">
+        <section class="english section-pad" id="english">
+            <div class="container">
+                <div class="reveal">
+                    <div class="label">English Version</div>
+                    <h2 class="display">For our<br />guests</h2>
+                </div>
 
-      <div class="reveal">
-        <div class="label">English Version</div>
-        <h2 class="display">For our<br>guests</h2>
-      </div>
+                <div class="english-cols">
+                    <div class="english-col">
+                        <h3 class="reveal">
+                            Arnakke Festival — July 9–12, 2026
+                        </h3>
+                        <p class="reveal">
+                            Become a member of the association and join us for
+                            three unforgettable summer days under the treetops.
+                            Once again this year, Arnakke Festival welcomes you
+                            to celebrate with new and old friends alike —
+                            everyone is welcome!
+                        </p>
 
-      <div class="english-cols">
-        <div class="english-col">
-          <h3 class="reveal">Arnakke Festival — July 9–12, 2026</h3>
-          <p class="reveal">Become a member of the association and join us for three unforgettable summer days under the treetops. Once again this year, Arnakke Festival welcomes you to celebrate with new and old friends alike — everyone is welcome!</p>
+                        <h3 class="reveal">Tickets</h3>
+                        <div class="reveal">
+                            <p>
+                                Tickets are now on sale! You can purchase both
+                                full festival passes and one-day tickets.
+                            </p>
+                            <p>
+                                With a full festival pass, you get three days of
+                                music, events, workshops, homemade breakfast
+                                buns, long-table dinners with greens from the
+                                farm, parties for as long as you like, an
+                                affordable bar, and new friendships!
+                            </p>
+                            <div
+                                class="ticket-buy-wrap"
+                                style="text-align: left; margin-top: 1.5rem"
+                            >
+                                <a
+                                    class="ticket-buy-btn"
+                                    href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >Buy tickets</a
+                                >
+                            </div>
+                        </div>
+                    </div>
 
-          <h3 class="reveal">Tickets</h3>
-          <div class="reveal">
-            <p>Tickets are now on sale! You can purchase both full festival passes and one-day tickets.</p>
-            <p>With a full festival pass, you get three days of music, events, workshops, homemade breakfast buns, long-table dinners with greens from the farm, parties for as long as you like, an affordable bar, and new friendships!</p>
-            <div class="ticket-buy-wrap" style="text-align:left; margin-top:1.5rem;">
-              <a class="ticket-buy-btn" href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435" target="_blank" rel="noopener">Buy tickets</a>
+                    <div class="english-col">
+                        <h3 class="reveal">What is Arnakke Festival?</h3>
+                        <div class="reveal">
+                            <p>
+                                Arnakke Festival is a three-day festival held at
+                                Arnakke Gaard in Svinninge, featuring music,
+                                talks, dancing, food, and play! The festival
+                                began as a birthday party in the farm's backyard
+                                in 2020, when the COVID-19 pandemic had brought
+                                the major festivals to a halt. Arnakke Gaard
+                                opened its doors to 50 wonderful young people
+                                who could lounge in hammocks in the sun and
+                                dance together under the trees in the glow of a
+                                disco ball.
+                            </p>
+                            <p>
+                                Since then, the festival has evolved — and in
+                                early 2026, we founded Arnakke Festival Forening
+                                (the Arnakke Festival Association) to give our
+                                existing engagement a formal structure. What
+                                does that mean for you? When you buy your
+                                festival ticket, you also become a member of
+                                Arnakke Festival Forening.
+                            </p>
+                            <p>
+                                With the association, we want to create more
+                                than just a festival; we want to build a lasting
+                                community that is celebrated year after year,
+                                when tractors and harvesters are moved aside to
+                                make room for concerts, talks, and long tables
+                                filled with abundant local food, and for some
+                                truly enchanting days together.
+                            </p>
+                            <p>
+                                This year marks the
+                                <strong>seventh edition</strong> of the
+                                festival. So grab your friends and invite them
+                                to the event!
+                            </p>
+                        </div>
+
+                        <h3 class="reveal">Practical Info</h3>
+                        <div class="reveal">
+                            <p>
+                                Arnakke Festival takes place from
+                                <strong
+                                    >Thursday, July 9th to Sunday, July 12th,
+                                    2026</strong
+                                >.
+                            </p>
+                            <p>
+                                Information about the music program, events,
+                                transportation, food, and more will be shared on
+                                an ongoing basis.
+                            </p>
+                            <p>
+                                If you have any questions, please contact one of
+                                the event administrators.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="english-col">
-          <h3 class="reveal">What is Arnakke Festival?</h3>
-          <div class="reveal">
-            <p>Arnakke Festival is a three-day festival held at Arnakke Gaard in Svinninge, featuring music, talks, dancing, food, and play! The festival began as a birthday party in the farm's backyard in 2020, when the COVID-19 pandemic had brought the major festivals to a halt. Arnakke Gaard opened its doors to 50 wonderful young people who could lounge in hammocks in the sun and dance together under the trees in the glow of a disco ball.</p>
-            <p>Since then, the festival has evolved — and in early 2026, we founded Arnakke Festival Forening (the Arnakke Festival Association) to give our existing engagement a formal structure. What does that mean for you? When you buy your festival ticket, you also become a member of Arnakke Festival Forening.</p>
-            <p>With the association, we want to create more than just a festival; we want to build a lasting community that is celebrated year after year, when tractors and harvesters are moved aside to make room for concerts, talks, and long tables filled with abundant local food, and for some truly enchanting days together.</p>
-            <p>This year marks the <strong>seventh edition</strong> of the festival. So grab your friends and invite them to the event!</p>
-          </div>
-
-          <h3 class="reveal">Practical Info</h3>
-          <div class="reveal">
-            <p>Arnakke Festival takes place from <strong>Thursday, July 9th to Sunday, July 12th, 2026</strong>.</p>
-            <p>Information about the music program, events, transportation, food, and more will be shared on an ongoing basis.</p>
-            <p>If you have any questions, please contact one of the event administrators.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============================================================
+        <!-- ============================================================
        FOOTER
-  ============================================================ -->
-  <footer>
-    <img src="logo-hero.png" alt="Arnakke Festival" class="footer-logo">
-    <ul class="footer-links">
-      <li><a href="#billetter">Billetter</a></li>
-      <li><a href="https://www.instagram.com/arnakkefestival/" target="_blank">Instagram</a></li>
-      <li><a href="https://www.facebook.com/events/1520549316741750" target="_blank">Facebook</a></li>
+  =========================================================== -->
+        <footer>
+            <img
+                src="logo-hero.png"
+                alt="Arnakke Festival"
+                class="footer-logo"
+            />
+            <ul class="footer-links">
+                <li><a href="#billetter">Billetter</a></li>
+                <li>
+                    <a
+                        href="https://www.instagram.com/arnakkefestival/"
+                        target="_blank"
+                        >Instagram</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://www.facebook.com/events/1520549316741750"
+                        target="_blank"
+                        >Facebook</a
+                    >
+                </li>
+            </ul>
+            <p class="footer-copy">
+                &copy; 2026 Arnakke Festival. Alle rettigheder forbeholdes.
+            </p>
+        </footer>
 
-    </ul>
-    <p class="footer-copy">&copy; 2026 Arnakke Festival. Alle rettigheder forbeholdes.</p>
-  </footer>
+        <script>
+            // ── Navbar ──────────────────────────────────────────────────
+            const navbar = document.getElementById("navbar");
+            window.addEventListener(
+                "scroll",
+                () => {
+                    navbar.classList.toggle("scrolled", window.scrollY > 60);
+                },
+                { passive: true },
+            );
 
-  <script>
-    // ── Navbar ──────────────────────────────────────────────────
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
-    }, { passive: true });
+            // ── Mobile menu ─────────────────────────────────────────────
+            const menuToggle = document.getElementById("menuToggle");
+            const navLinks = document.getElementById("navLinks");
+            menuToggle.addEventListener("click", () =>
+                navLinks.classList.toggle("open"),
+            );
+            navLinks.querySelectorAll("a").forEach((a) => {
+                a.addEventListener("click", () =>
+                    navLinks.classList.remove("open"),
+                );
+            });
 
-    // ── Mobile menu ─────────────────────────────────────────────
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks   = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
+            // ── Hero parallax ───────────────────────────────────────────
+            const heroBg = document.getElementById("heroBg");
+            const reducedMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)",
+            ).matches;
+            const vh = window.innerHeight;
+            if (!reducedMotion) {
+                window.addEventListener(
+                    "scroll",
+                    () => {
+                        const y = window.scrollY;
+                        if (y < vh * 1.2) {
+                            heroBg.style.transform = `translateY(${y * 0.28}px)`;
+                        }
+                    },
+                    { passive: true },
+                );
+            }
 
-    // ── Hero parallax ───────────────────────────────────────────
-    const heroBg = document.getElementById('heroBg');
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const vh = window.innerHeight;
-    if (!reducedMotion) {
-      window.addEventListener('scroll', () => {
-        const y = window.scrollY;
-        if (y < vh * 1.2) {
-          heroBg.style.transform = `translateY(${y * 0.28}px)`;
-        }
-      }, { passive: true });
-    }
+            // ── Scroll reveal ───────────────────────────────────────────
+            const reveals = document.querySelectorAll(".reveal");
+            const io = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((e) => {
+                        if (e.isIntersecting) {
+                            e.target.classList.add("v");
+                            io.unobserve(e.target);
+                        }
+                    });
+                },
+                { threshold: 0.08, rootMargin: "0px 0px -50px 0px" },
+            );
 
-    // ── Scroll reveal ───────────────────────────────────────────
-    const reveals = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('v');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
-
-    reveals.forEach(el => io.observe(el));
-  </script>
-
-</body>
+            reveals.forEach((el) => io.observe(el));
+        </script>
+    </body>
 </html>
