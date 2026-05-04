@@ -551,6 +551,28 @@
                 background: var(--paper);
                 border: 1px solid var(--paper-dark);
                 display: flex;
+                color: inherit;
+                text-decoration: none;
+                cursor: pointer;
+                transition:
+                    transform 0.2s ease,
+                    box-shadow 0.2s ease,
+                    border-color 0.2s ease;
+            }
+
+            .ticket-stub:hover {
+                transform: translateY(-3px);
+                border-color: var(--terra);
+                box-shadow: 0 12px 30px -12px rgba(26, 22, 18, 0.35);
+            }
+
+            .ticket-stub:hover .ticket-spine {
+                background: var(--terra);
+            }
+
+            .ticket-stub:focus-visible {
+                outline: 2px solid var(--terra);
+                outline-offset: 4px;
             }
 
             .ticket-body {
@@ -1229,9 +1251,8 @@
                 <!-- <span class="info-strip-item">Musik · Events · Mad · Fællesskab</span> -->
                 <!-- <span class="info-strip-dot">◆</span> -->
                 <span class="info-strip-item"
-                    >Early Bird billetter frem til
+                    >Billetter i salg nu
                 </span>
-                <span class="info-strip-item"><strong>1. Maj</strong></span>
                 <!-- <span class="info-strip-dot">◆</span> -->
             </div>
         </div>
@@ -1245,23 +1266,21 @@
                     <div class="label">Billetsalg</div>
                     <h2 class="display">Kom<br />med</h2>
                     <p class="ticket-opening">
-                        Early Bird billetter frem til <strong>1. Maj</strong>
+                        Billetter i salg nu
                     </p>
                 </div>
 
                 <div class="tickets-grid">
-                    <div class="ticket-stub reveal delay-1">
+                    <a class="ticket-stub reveal delay-1"
+                        href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Køb Partout-billet">
                         <div class="ticket-body">
                             <div class="ticket-type">Partout</div>
                             <div class="ticket-sub">Fuld festival — 3 dage</div>
                             <div class="ticket-price">
-                                <span class="ticket-price-main">600 kr.</span>
-                                <span class="ticket-price-label"
-                                    >Early bird</span
-                                >
-                                <span class="ticket-price-normal"
-                                    >700 kr. normalpris</span
-                                >
+                                <span class="ticket-price-main">700 kr.</span>
                             </div>
                         </div>
                         <div class="ticket-spine">
@@ -1272,9 +1291,13 @@
                                 Arnakke<br />Gaard<br />Svinninge
                             </div>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="ticket-stub reveal delay-2">
+                    <a class="ticket-stub reveal delay-2"
+                        href="https://arnakkefestival.safeticket.dk/3c41bba0487f870977d9019a6ed709a374edb2467fa0c5fb27c7c77179b1d702417b864c57d6d859ae807c1f3a7b2435"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Køb endagsbillet">
                         <div class="ticket-body">
                             <div class="ticket-type">Endags&shy;billet</div>
                             <div class="ticket-sub">En dag — dit valg</div>
@@ -1290,7 +1313,7 @@
                                 Arnakke<br />Gaard<br />Svinninge
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <p class="tickets-note reveal">
