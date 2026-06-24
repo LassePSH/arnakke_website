@@ -721,6 +721,65 @@
                 color: var(--gold);
             }
 
+            .bus-ticket {
+                margin-top: 3.5rem;
+                border-top: 1px solid var(--paper-dark);
+                padding-top: 3rem;
+                text-align: center;
+            }
+
+            .bus-ticket .label {
+                color: var(--sage);
+                justify-content: center;
+            }
+
+            .bus-ticket-title {
+                font-family: "Bodoni Moda", serif;
+                font-style: italic;
+                font-size: clamp(1.6rem, 4vw, 2.4rem);
+                color: var(--forest);
+                margin: 0.6rem 0 1rem;
+            }
+
+            .bus-ticket-text {
+                font-family: "Courier Prime", monospace;
+                font-size: 1rem;
+                letter-spacing: 0.12em;
+                line-height: 1.7;
+                color: var(--muted);
+                max-width: 38rem;
+                margin: 0 auto 1.8rem;
+            }
+
+            .bus-ticket-meta {
+                font-family: "Courier Prime", monospace;
+                font-size: 0.78rem;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: var(--terra);
+            }
+
+            .bus-buy-btn {
+                display: inline-block;
+                font-family: "Courier Prime", monospace;
+                font-size: 0.8rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--paper);
+                background: var(--forest);
+                padding: 1rem 2.5rem;
+                border: none;
+                text-decoration: none;
+                transition:
+                    background 0.2s,
+                    color 0.2s;
+            }
+
+            .bus-buy-btn:hover {
+                background: var(--ink);
+                color: var(--gold);
+            }
+
             /* ============================================================
        ABOUT
     ============================================================ */
@@ -1541,6 +1600,25 @@
                         >Køb billetter</a
                     >
                 </div>
+
+                <div class="bus-ticket reveal">
+                    <h3 class="bus-ticket-title">Tag Arnakke bussen</h3>
+                    <p class="bus-ticket-text">
+                        Hop på Arnakke bussen direkte fra København til Arnakke.
+                        Køb en enkelt vej eller tur-retur!
+                        <br />
+                        <span class="bus-ticket-meta"
+                            >Bussen afgår kl. 14 d. 9/7 fra København</span
+                        >
+                    </p>
+                    <a
+                        class="bus-buy-btn"
+                        href="https://arnakkefestival.safeticket.dk/3fd0fbadb5c9d512632c3f0e9381d80b5a9030721bd28d2339d0c8bf1ce99171d2f2976b1aec60c7d329693bcde5b227"
+                        target="_blank"
+                        rel="noopener"
+                        >Køb busbillet</a
+                    >
+                </div>
             </div>
         </section>
 
@@ -1648,11 +1726,29 @@
                             <span class="day-name">Torsdag</span>
                             <span class="day-date">9. juli</span>
                         </header>
-                        <div class="lineup-row-tba">
-                            <span class="t-time">17:00</span>
-                            <span class="t-divider"></span>
-                            <span class="t-label">TBA</span>
-                        </div>
+                        <article class="lineup-row">
+                            <button type="button" class="lineup-row-toggle" aria-expanded="false" aria-controls="bio-evig" style="--row-image: url('pictures/evig.jpg')">
+                                <div class="lineup-row-content">
+                                    <div class="lineup-row-meta">
+                                        <span class="lineup-time">17:00</span>
+                                    </div>
+                                    <h3 class="lineup-name">evig</h3>
+                                    <p class="lineup-tagline">Dansk elektronisk pop der går på line mellem det sårbare og det eksplosive.</p>
+                                    <span class="lineup-more">Læs mere</span>
+                                </div>
+                                <div class="lineup-photo" aria-hidden="true"></div>
+                            </button>
+                            <div class="lineup-bio-wrap" id="bio-evig">
+                                <div class="lineup-bio">
+                                    <div class="lineup-bio-inner">
+                                        <p>evig er dansk elektronisk pop der går på line mellem det sårbare og det eksplosive.</p>
+                                        <p>Med inspiration fra kunstnere som Blaue Blume, Loreen og Highasakite skaber hun drømmende lydlandskaber fyldt med melankolske synthflader, pulserende beats og intim vokal.</p>
+                                        <p>evig er lyden af din gåtur hjem efter byen, med støvregn i luften og stjerner på himlen.</p>
+                                        <p>evig er en følelse der bliver siddende i kroppen.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                         <div class="lineup-row-tba">
                             <span class="t-time">22:00</span>
                             <span class="t-divider"></span>
@@ -1707,11 +1803,28 @@
                             <span class="day-name">Lørdag</span>
                             <span class="day-date">11. juli</span>
                         </header>
-                        <div class="lineup-row-tba">
-                            <span class="t-time">17:00</span>
-                            <span class="t-divider"></span>
-                            <span class="t-label">TBA</span>
-                        </div>
+                        <article class="lineup-row">
+                            <button type="button" class="lineup-row-toggle" aria-expanded="false" aria-controls="bio-elkadmiri" style="--row-image: url('pictures/Elkadmiri.jpg')">
+                                <div class="lineup-row-content">
+                                    <div class="lineup-row-meta">
+                                        <span class="lineup-time">17:00</span>
+                                    </div>
+                                    <h3 class="lineup-name">Elkadmiri</h3>
+                                    <p class="lineup-tagline">Hiphop- og R&amp;B-inspireret pop om storbyens rastløshed og jagten på nærvær.</p>
+                                    <span class="lineup-more">Læs mere</span>
+                                </div>
+                                <div class="lineup-photo" aria-hidden="true"></div>
+                            </button>
+                            <div class="lineup-bio-wrap" id="bio-elkadmiri">
+                                <div class="lineup-bio">
+                                    <div class="lineup-bio-inner">
+                                        <p>Elkadmiri er et ærligt og længselsfuldt portræt af et liv i storbyens høje tempo, natteliv og rastløshed. Sangene kredser om komplekse relationer, flugten fra sit eget hoved, den sursøde københavnske datinglabyrint og jagten efter nærvær i en kultur, der konstant er på vej videre.</p>
+                                        <p>I et hiphop- og R&amp;B-inspireret popunivers forener Elkadmiri sårbarhed og attitude og skaber en koncert med plads til både dans og til gråd &ndash; som shots på et dansegulv til et knust hjerte, hvor humor og inderlighed eksisterer side om side.</p>
+                                        <p>I efteråret 2026 udkommer hendes debut-EP og til sommerens koncerter kan hun opleves i et intimt og filterløst set-up, hvor distancen mellem hende og publikum nedbrydes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
                         <article class="lineup-row">
                             <button type="button" class="lineup-row-toggle" aria-expanded="false" aria-controls="bio-tredjeperson" style="--row-image: url('pictures/tredjeperson.jpg')">
                                 <div class="lineup-row-content">
@@ -1850,8 +1963,15 @@
                             på Arnakke Gaard i Svinninge.
                         </p>
                         <p>
-                            Der vil løbende komme information om musikprogram,
-                            events, transport, mad mm.
+                            Tag Arnakke bussen direkte fra København — den
+                            afgår kl. 14 d. 9/7.
+                            <br />
+                            <a
+                                href="https://arnakkefestival.safeticket.dk/3fd0fbadb5c9d512632c3f0e9381d80b5a9030721bd28d2339d0c8bf1ce99171d2f2976b1aec60c7d329693bcde5b227"
+                                target="_blank"
+                                rel="noopener"
+                                >Køb din billet her!</a
+                            >
                         </p>
                     </div>
                     <div class="practical-block reveal delay-2">
